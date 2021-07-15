@@ -1,12 +1,25 @@
-package com.example.ecommerce.model.ecommerce.ecommerce;
-
-import com.example.ecommerce.model.ecommerce.impl.EcommerceFactoryImpl;
+/**
+ */
+package com.example.ecommerce.model;
 
 import org.eclipse.emf.ecore.EFactory;
 
+/**
+ * <!-- begin-user-doc -->
+ * The <b>Factory</b> for the model.
+ * It provides a create method for each non-abstract class of the model.
+ * <!-- end-user-doc -->
+ * @see EcommercePackage
+ * @generated
+ */
 public interface EcommerceFactory extends EFactory {
-
-	EcommerceFactory eINSTANCE = ecommerce.ecommerce.impl.EcommerceFactoryImpl.init();
+	/**
+	 * The singleton instance of the factory.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	EcommerceFactory eINSTANCE = com.example.ecommerce.model.impl.EcommerceFactoryImpl.init();
 
 	/**
 	 * Returns a new object of class '<em>Cliente</em>'.

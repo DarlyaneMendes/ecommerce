@@ -1,12 +1,6 @@
-package com.example.ecommerce.model.ecommerce.ecommerce.impl;
-
-import com.example.ecommerce.model.ecommerce.ecommerce.Categoria;
-import com.example.ecommerce.model.ecommerce.ecommerce.Cliente;
-import com.example.ecommerce.model.ecommerce.ecommerce.EcommerceFactory;
-import com.example.ecommerce.model.ecommerce.ecommerce.EcommercePackage;
-import com.example.ecommerce.model.ecommerce.ecommerce.ItemPedido;
-import com.example.ecommerce.model.ecommerce.ecommerce.Pedido;
-import com.example.ecommerce.model.ecommerce.ecommerce.Produto;
+/**
+ */
+package com.example.ecommerce.model.impl;
 
 import org.eclipse.emf.ecore.EClass;
 import org.eclipse.emf.ecore.EObject;
@@ -16,6 +10,14 @@ import org.eclipse.emf.ecore.impl.EFactoryImpl;
 
 import org.eclipse.emf.ecore.plugin.EcorePlugin;
 
+import com.example.ecommerce.model.*;
+
+/**
+ * <!-- begin-user-doc -->
+ * An implementation of the model <b>Factory</b>.
+ * <!-- end-user-doc -->
+ * @generated
+ */
 public class EcommerceFactoryImpl extends EFactoryImpl implements EcommerceFactory {
 	/**
 	 * Creates the default factory implementation.
@@ -25,8 +27,7 @@ public class EcommerceFactoryImpl extends EFactoryImpl implements EcommerceFacto
 	 */
 	public static EcommerceFactory init() {
 		try {
-			EcommerceFactory theEcommerceFactory = (EcommerceFactory)EPackage.Registry
-					.INSTANCE.getEFactory(EcommercePackage.eNS_URI);
+			EcommerceFactory theEcommerceFactory = (EcommerceFactory)EPackage.Registry.INSTANCE.getEFactory(EcommercePackage.eNS_URI);
 			if (theEcommerceFactory != null) {
 				return theEcommerceFactory;
 			}
@@ -37,6 +38,12 @@ public class EcommerceFactoryImpl extends EFactoryImpl implements EcommerceFacto
 		return new EcommerceFactoryImpl();
 	}
 
+	/**
+	 * Creates an instance of the factory.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
 	public EcommerceFactoryImpl() {
 		super();
 	}
@@ -59,40 +66,74 @@ public class EcommerceFactoryImpl extends EFactoryImpl implements EcommerceFacto
 		}
 	}
 
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
 	public Cliente createCliente() {
 		ClienteImpl cliente = new ClienteImpl();
 		return cliente;
 	}
 
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
 	public Pedido createPedido() {
 		PedidoImpl pedido = new PedidoImpl();
 		return pedido;
 	}
 
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
 	public Produto createProduto() {
 		ProdutoImpl produto = new ProdutoImpl();
 		return produto;
 	}
 
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
 	public Categoria createCategoria() {
 		CategoriaImpl categoria = new CategoriaImpl();
 		return categoria;
 	}
 
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
 	public ItemPedido createItemPedido() {
 		ItemPedidoImpl itemPedido = new ItemPedidoImpl();
 		return itemPedido;
 	}
 
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
 	public EcommercePackage getEcommercePackage() {
-
 		return (EcommercePackage)getEPackage();
 	}
 
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @deprecated
+	 * @generated
+	 */
 	@Deprecated
 	public static EcommercePackage getPackage() {
-
 		return EcommercePackage.eINSTANCE;
 	}
 
-}
+} //EcommerceFactoryImpl

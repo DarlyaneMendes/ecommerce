@@ -1,12 +1,11 @@
 /**
  */
-package com.example.ecommerce.model.ecommerce.ecommerce;
+package com.example.ecommerce.model;
 
 import org.eclipse.emf.ecore.EAttribute;
 import org.eclipse.emf.ecore.EClass;
 import org.eclipse.emf.ecore.EPackage;
 import org.eclipse.emf.ecore.EReference;
-
 
 /**
  * <!-- begin-user-doc -->
@@ -20,7 +19,7 @@ import org.eclipse.emf.ecore.EReference;
  *   <li>and each data type</li>
  * </ul>
  * <!-- end-user-doc -->
- * @see ecommerce.ecommerce.EcommerceFactory
+ * @see EcommerceFactory
  * @model kind="package"
  * @generated
  */
@@ -39,7 +38,7 @@ public interface EcommercePackage extends EPackage {
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	String eNS_URI = "http:///ecommerce/ecommerce.ecore";
+	String eNS_URI = "http:///ecommerce.ecore";
 
 	/**
 	 * The package namespace name.
@@ -47,7 +46,7 @@ public interface EcommercePackage extends EPackage {
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	String eNS_PREFIX = "ecommerce.ecommerce";
+	String eNS_PREFIX = "ecommerce";
 
 	/**
 	 * The singleton instance of the package.
@@ -55,14 +54,14 @@ public interface EcommercePackage extends EPackage {
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	EcommercePackage eINSTANCE = ecommerce.ecommerce.impl.EcommercePackageImpl.init();
+	EcommercePackage eINSTANCE = com.example.ecommerce.model.impl.EcommercePackageImpl.init();
 
 	/**
-	 * The meta object id for the '{@link ecommerce.ecommerce.impl.ClienteImpl <em>Cliente</em>}' class.
+	 * The meta object id for the '{@link com.example.ecommerce.model.impl.ClienteImpl <em>Cliente</em>}' class.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
-	 * @see ecommerce.ecommerce.impl.ClienteImpl
-	 * @see ecommerce.ecommerce.impl.EcommercePackageImpl#getCliente()
+	 * @see com.example.ecommerce.model.impl.ClienteImpl
+	 * @see com.example.ecommerce.model.impl.EcommercePackageImpl#getCliente()
 	 * @generated
 	 */
 	int CLIENTE = 0;
@@ -167,11 +166,11 @@ public interface EcommercePackage extends EPackage {
 	int CLIENTE_OPERATION_COUNT = 0;
 
 	/**
-	 * The meta object id for the '{@link ecommerce.ecommerce.impl.PedidoImpl <em>Pedido</em>}' class.
+	 * The meta object id for the '{@link com.example.ecommerce.model.impl.PedidoImpl <em>Pedido</em>}' class.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
-	 * @see ecommerce.ecommerce.impl.PedidoImpl
-	 * @see ecommerce.ecommerce.impl.EcommercePackageImpl#getPedido()
+	 * @see com.example.ecommerce.model.impl.PedidoImpl
+	 * @see com.example.ecommerce.model.impl.EcommercePackageImpl#getPedido()
 	 * @generated
 	 */
 	int PEDIDO = 1;
@@ -186,7 +185,7 @@ public interface EcommercePackage extends EPackage {
 	int PEDIDO__COD_PEDIDO = 0;
 
 	/**
-	 * The feature id for the '<em><b>Data Pedido</b></em>' containment reference.
+	 * The feature id for the '<em><b>Data Pedido</b></em>' attribute.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @generated
@@ -249,11 +248,11 @@ public interface EcommercePackage extends EPackage {
 	int PEDIDO_OPERATION_COUNT = 0;
 
 	/**
-	 * The meta object id for the '{@link ecommerce.ecommerce.impl.ProdutoImpl <em>Produto</em>}' class.
+	 * The meta object id for the '{@link com.example.ecommerce.model.impl.ProdutoImpl <em>Produto</em>}' class.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
-	 * @see ecommerce.ecommerce.impl.ProdutoImpl
-	 * @see ecommerce.ecommerce.impl.EcommercePackageImpl#getProduto()
+	 * @see com.example.ecommerce.model.impl.ProdutoImpl
+	 * @see com.example.ecommerce.model.impl.EcommercePackageImpl#getProduto()
 	 * @generated
 	 */
 	int PRODUTO = 2;
@@ -277,7 +276,7 @@ public interface EcommercePackage extends EPackage {
 	int PRODUTO__NOME_PRODUTO = 1;
 
 	/**
-	 * The feature id for the '<em><b>Preco Produto</b></em>' containment reference.
+	 * The feature id for the '<em><b>Preco Produto</b></em>' attribute.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @generated
@@ -331,11 +330,11 @@ public interface EcommercePackage extends EPackage {
 	int PRODUTO_OPERATION_COUNT = 0;
 
 	/**
-	 * The meta object id for the '{@link ecommerce.ecommerce.impl.CategoriaImpl <em>Categoria</em>}' class.
+	 * The meta object id for the '{@link com.example.ecommerce.model.impl.CategoriaImpl <em>Categoria</em>}' class.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
-	 * @see ecommerce.ecommerce.impl.CategoriaImpl
-	 * @see ecommerce.ecommerce.impl.EcommercePackageImpl#getCategoria()
+	 * @see com.example.ecommerce.model.impl.CategoriaImpl
+	 * @see com.example.ecommerce.model.impl.EcommercePackageImpl#getCategoria()
 	 * @generated
 	 */
 	int CATEGORIA = 3;
@@ -386,11 +385,11 @@ public interface EcommercePackage extends EPackage {
 	int CATEGORIA_OPERATION_COUNT = 0;
 
 	/**
-	 * The meta object id for the '{@link ecommerce.ecommerce.impl.ItemPedidoImpl <em>Item Pedido</em>}' class.
+	 * The meta object id for the '{@link com.example.ecommerce.model.impl.ItemPedidoImpl <em>Item Pedido</em>}' class.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
-	 * @see ecommerce.ecommerce.impl.ItemPedidoImpl
-	 * @see ecommerce.ecommerce.impl.EcommercePackageImpl#getItemPedido()
+	 * @see com.example.ecommerce.model.impl.ItemPedidoImpl
+	 * @see com.example.ecommerce.model.impl.EcommercePackageImpl#getItemPedido()
 	 * @generated
 	 */
 	int ITEM_PEDIDO = 4;
@@ -451,358 +450,358 @@ public interface EcommercePackage extends EPackage {
 
 
 	/**
-	 * Returns the meta object for class '{@link ecommerce.ecommerce.Cliente <em>Cliente</em>}'.
+	 * Returns the meta object for class '{@link Cliente <em>Cliente</em>}'.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @return the meta object for class '<em>Cliente</em>'.
-	 * @see ecommerce.ecommerce.Cliente
+	 * @see Cliente
 	 * @generated
 	 */
 	EClass getCliente();
 
 	/**
-	 * Returns the meta object for the attribute '{@link ecommerce.ecommerce.Cliente#getCpf <em>Cpf</em>}'.
+	 * Returns the meta object for the attribute '{@link Cliente#getCpf <em>Cpf</em>}'.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @return the meta object for the attribute '<em>Cpf</em>'.
-	 * @see ecommerce.ecommerce.Cliente#getCpf()
+	 * @see Cliente#getCpf()
 	 * @see #getCliente()
 	 * @generated
 	 */
 	EAttribute getCliente_Cpf();
 
 	/**
-	 * Returns the meta object for the attribute '{@link ecommerce.ecommerce.Cliente#getNomeCliente <em>Nome Cliente</em>}'.
+	 * Returns the meta object for the attribute '{@link Cliente#getNomeCliente <em>Nome Cliente</em>}'.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @return the meta object for the attribute '<em>Nome Cliente</em>'.
-	 * @see ecommerce.ecommerce.Cliente#getNomeCliente()
+	 * @see Cliente#getNomeCliente()
 	 * @see #getCliente()
 	 * @generated
 	 */
 	EAttribute getCliente_NomeCliente();
 
 	/**
-	 * Returns the meta object for the attribute '{@link ecommerce.ecommerce.Cliente#getEndereco <em>Endereco</em>}'.
+	 * Returns the meta object for the attribute '{@link Cliente#getEndereco <em>Endereco</em>}'.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @return the meta object for the attribute '<em>Endereco</em>'.
-	 * @see ecommerce.ecommerce.Cliente#getEndereco()
+	 * @see Cliente#getEndereco()
 	 * @see #getCliente()
 	 * @generated
 	 */
 	EAttribute getCliente_Endereco();
 
 	/**
-	 * Returns the meta object for the attribute '{@link ecommerce.ecommerce.Cliente#getEstado <em>Estado</em>}'.
+	 * Returns the meta object for the attribute '{@link Cliente#getEstado <em>Estado</em>}'.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @return the meta object for the attribute '<em>Estado</em>'.
-	 * @see ecommerce.ecommerce.Cliente#getEstado()
+	 * @see Cliente#getEstado()
 	 * @see #getCliente()
 	 * @generated
 	 */
 	EAttribute getCliente_Estado();
 
 	/**
-	 * Returns the meta object for the attribute '{@link ecommerce.ecommerce.Cliente#getMunicipio <em>Municipio</em>}'.
+	 * Returns the meta object for the attribute '{@link Cliente#getMunicipio <em>Municipio</em>}'.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @return the meta object for the attribute '<em>Municipio</em>'.
-	 * @see ecommerce.ecommerce.Cliente#getMunicipio()
+	 * @see Cliente#getMunicipio()
 	 * @see #getCliente()
 	 * @generated
 	 */
 	EAttribute getCliente_Municipio();
 
 	/**
-	 * Returns the meta object for the attribute '{@link ecommerce.ecommerce.Cliente#getTelefone <em>Telefone</em>}'.
+	 * Returns the meta object for the attribute '{@link Cliente#getTelefone <em>Telefone</em>}'.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @return the meta object for the attribute '<em>Telefone</em>'.
-	 * @see ecommerce.ecommerce.Cliente#getTelefone()
+	 * @see Cliente#getTelefone()
 	 * @see #getCliente()
 	 * @generated
 	 */
 	EAttribute getCliente_Telefone();
 
 	/**
-	 * Returns the meta object for the attribute '{@link ecommerce.ecommerce.Cliente#getEmail <em>Email</em>}'.
+	 * Returns the meta object for the attribute '{@link Cliente#getEmail <em>Email</em>}'.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @return the meta object for the attribute '<em>Email</em>'.
-	 * @see ecommerce.ecommerce.Cliente#getEmail()
+	 * @see Cliente#getEmail()
 	 * @see #getCliente()
 	 * @generated
 	 */
 	EAttribute getCliente_Email();
 
 	/**
-	 * Returns the meta object for the attribute '{@link ecommerce.ecommerce.Cliente#getSenha <em>Senha</em>}'.
+	 * Returns the meta object for the attribute '{@link Cliente#getSenha <em>Senha</em>}'.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @return the meta object for the attribute '<em>Senha</em>'.
-	 * @see ecommerce.ecommerce.Cliente#getSenha()
+	 * @see Cliente#getSenha()
 	 * @see #getCliente()
 	 * @generated
 	 */
 	EAttribute getCliente_Senha();
 
 	/**
-	 * Returns the meta object for the reference '{@link ecommerce.ecommerce.Cliente#getPedido <em>Pedido</em>}'.
+	 * Returns the meta object for the reference '{@link Cliente#getPedido <em>Pedido</em>}'.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @return the meta object for the reference '<em>Pedido</em>'.
-	 * @see ecommerce.ecommerce.Cliente#getPedido()
+	 * @see Cliente#getPedido()
 	 * @see #getCliente()
 	 * @generated
 	 */
 	EReference getCliente_Pedido();
 
 	/**
-	 * Returns the meta object for class '{@link ecommerce.ecommerce.Pedido <em>Pedido</em>}'.
+	 * Returns the meta object for class '{@link Pedido <em>Pedido</em>}'.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @return the meta object for class '<em>Pedido</em>'.
-	 * @see ecommerce.ecommerce.Pedido
+	 * @see Pedido
 	 * @generated
 	 */
 	EClass getPedido();
 
 	/**
-	 * Returns the meta object for the attribute '{@link ecommerce.ecommerce.Pedido#getCodPedido <em>Cod Pedido</em>}'.
+	 * Returns the meta object for the attribute '{@link Pedido#getCodPedido <em>Cod Pedido</em>}'.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @return the meta object for the attribute '<em>Cod Pedido</em>'.
-	 * @see ecommerce.ecommerce.Pedido#getCodPedido()
+	 * @see Pedido#getCodPedido()
 	 * @see #getPedido()
 	 * @generated
 	 */
 	EAttribute getPedido_CodPedido();
 
 	/**
-	 * Returns the meta object for the containment reference '{@link ecommerce.ecommerce.Pedido#getDataPedido <em>Data Pedido</em>}'.
+	 * Returns the meta object for the attribute '{@link Pedido#getDataPedido <em>Data Pedido</em>}'.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
-	 * @return the meta object for the containment reference '<em>Data Pedido</em>'.
-	 * @see ecommerce.ecommerce.Pedido#getDataPedido()
+	 * @return the meta object for the attribute '<em>Data Pedido</em>'.
+	 * @see Pedido#getDataPedido()
 	 * @see #getPedido()
 	 * @generated
 	 */
-	EReference getPedido_DataPedido();
+	EAttribute getPedido_DataPedido();
 
 	/**
-	 * Returns the meta object for the attribute '{@link ecommerce.ecommerce.Pedido#getCpf <em>Cpf</em>}'.
+	 * Returns the meta object for the attribute '{@link Pedido#getCpf <em>Cpf</em>}'.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @return the meta object for the attribute '<em>Cpf</em>'.
-	 * @see ecommerce.ecommerce.Pedido#getCpf()
+	 * @see Pedido#getCpf()
 	 * @see #getPedido()
 	 * @generated
 	 */
 	EAttribute getPedido_Cpf();
 
 	/**
-	 * Returns the meta object for the reference list '{@link ecommerce.ecommerce.Pedido#getProduto <em>Produto</em>}'.
+	 * Returns the meta object for the reference list '{@link Pedido#getProduto <em>Produto</em>}'.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @return the meta object for the reference list '<em>Produto</em>'.
-	 * @see ecommerce.ecommerce.Pedido#getProduto()
+	 * @see Pedido#getProduto()
 	 * @see #getPedido()
 	 * @generated
 	 */
 	EReference getPedido_Produto();
 
 	/**
-	 * Returns the meta object for the reference list '{@link ecommerce.ecommerce.Pedido#getItemPedido <em>Item Pedido</em>}'.
+	 * Returns the meta object for the reference list '{@link Pedido#getItemPedido <em>Item Pedido</em>}'.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @return the meta object for the reference list '<em>Item Pedido</em>'.
-	 * @see ecommerce.ecommerce.Pedido#getItemPedido()
+	 * @see Pedido#getItemPedido()
 	 * @see #getPedido()
 	 * @generated
 	 */
 	EReference getPedido_ItemPedido();
 
 	/**
-	 * Returns the meta object for the reference list '{@link ecommerce.ecommerce.Pedido#getCliente <em>Cliente</em>}'.
+	 * Returns the meta object for the reference list '{@link Pedido#getCliente <em>Cliente</em>}'.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @return the meta object for the reference list '<em>Cliente</em>'.
-	 * @see ecommerce.ecommerce.Pedido#getCliente()
+	 * @see Pedido#getCliente()
 	 * @see #getPedido()
 	 * @generated
 	 */
 	EReference getPedido_Cliente();
 
 	/**
-	 * Returns the meta object for class '{@link ecommerce.ecommerce.Produto <em>Produto</em>}'.
+	 * Returns the meta object for class '{@link Produto <em>Produto</em>}'.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @return the meta object for class '<em>Produto</em>'.
-	 * @see ecommerce.ecommerce.Produto
+	 * @see Produto
 	 * @generated
 	 */
 	EClass getProduto();
 
 	/**
-	 * Returns the meta object for the attribute '{@link ecommerce.ecommerce.Produto#getCodProduto <em>Cod Produto</em>}'.
+	 * Returns the meta object for the attribute '{@link Produto#getCodProduto <em>Cod Produto</em>}'.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @return the meta object for the attribute '<em>Cod Produto</em>'.
-	 * @see ecommerce.ecommerce.Produto#getCodProduto()
+	 * @see Produto#getCodProduto()
 	 * @see #getProduto()
 	 * @generated
 	 */
 	EAttribute getProduto_CodProduto();
 
 	/**
-	 * Returns the meta object for the attribute '{@link ecommerce.ecommerce.Produto#getNomeProduto <em>Nome Produto</em>}'.
+	 * Returns the meta object for the attribute '{@link Produto#getNomeProduto <em>Nome Produto</em>}'.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @return the meta object for the attribute '<em>Nome Produto</em>'.
-	 * @see ecommerce.ecommerce.Produto#getNomeProduto()
+	 * @see Produto#getNomeProduto()
 	 * @see #getProduto()
 	 * @generated
 	 */
 	EAttribute getProduto_NomeProduto();
 
 	/**
-	 * Returns the meta object for the containment reference '{@link ecommerce.ecommerce.Produto#getPrecoProduto <em>Preco Produto</em>}'.
+	 * Returns the meta object for the attribute '{@link Produto#getPrecoProduto <em>Preco Produto</em>}'.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
-	 * @return the meta object for the containment reference '<em>Preco Produto</em>'.
-	 * @see ecommerce.ecommerce.Produto#getPrecoProduto()
+	 * @return the meta object for the attribute '<em>Preco Produto</em>'.
+	 * @see Produto#getPrecoProduto()
 	 * @see #getProduto()
 	 * @generated
 	 */
-	EReference getProduto_PrecoProduto();
+	EAttribute getProduto_PrecoProduto();
 
 	/**
-	 * Returns the meta object for the attribute '{@link ecommerce.ecommerce.Produto#getQtdeEstoque <em>Qtde Estoque</em>}'.
+	 * Returns the meta object for the attribute '{@link Produto#getQtdeEstoque <em>Qtde Estoque</em>}'.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @return the meta object for the attribute '<em>Qtde Estoque</em>'.
-	 * @see ecommerce.ecommerce.Produto#getQtdeEstoque()
+	 * @see Produto#getQtdeEstoque()
 	 * @see #getProduto()
 	 * @generated
 	 */
 	EAttribute getProduto_QtdeEstoque();
 
 	/**
-	 * Returns the meta object for the reference list '{@link ecommerce.ecommerce.Produto#getCategoria <em>Categoria</em>}'.
+	 * Returns the meta object for the reference list '{@link Produto#getCategoria <em>Categoria</em>}'.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @return the meta object for the reference list '<em>Categoria</em>'.
-	 * @see ecommerce.ecommerce.Produto#getCategoria()
+	 * @see Produto#getCategoria()
 	 * @see #getProduto()
 	 * @generated
 	 */
 	EReference getProduto_Categoria();
 
 	/**
-	 * Returns the meta object for the reference list '{@link ecommerce.ecommerce.Produto#getPedido <em>Pedido</em>}'.
+	 * Returns the meta object for the reference list '{@link Produto#getPedido <em>Pedido</em>}'.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @return the meta object for the reference list '<em>Pedido</em>'.
-	 * @see ecommerce.ecommerce.Produto#getPedido()
+	 * @see Produto#getPedido()
 	 * @see #getProduto()
 	 * @generated
 	 */
 	EReference getProduto_Pedido();
 
 	/**
-	 * Returns the meta object for class '{@link ecommerce.ecommerce.Categoria <em>Categoria</em>}'.
+	 * Returns the meta object for class '{@link Categoria <em>Categoria</em>}'.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @return the meta object for class '<em>Categoria</em>'.
-	 * @see ecommerce.ecommerce.Categoria
+	 * @see Categoria
 	 * @generated
 	 */
 	EClass getCategoria();
 
 	/**
-	 * Returns the meta object for the attribute '{@link ecommerce.ecommerce.Categoria#getCodCategoria <em>Cod Categoria</em>}'.
+	 * Returns the meta object for the attribute '{@link Categoria#getCodCategoria <em>Cod Categoria</em>}'.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @return the meta object for the attribute '<em>Cod Categoria</em>'.
-	 * @see ecommerce.ecommerce.Categoria#getCodCategoria()
+	 * @see Categoria#getCodCategoria()
 	 * @see #getCategoria()
 	 * @generated
 	 */
 	EAttribute getCategoria_CodCategoria();
 
 	/**
-	 * Returns the meta object for the attribute '{@link ecommerce.ecommerce.Categoria#getNomeCategoria <em>Nome Categoria</em>}'.
+	 * Returns the meta object for the attribute '{@link Categoria#getNomeCategoria <em>Nome Categoria</em>}'.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @return the meta object for the attribute '<em>Nome Categoria</em>'.
-	 * @see ecommerce.ecommerce.Categoria#getNomeCategoria()
+	 * @see Categoria#getNomeCategoria()
 	 * @see #getCategoria()
 	 * @generated
 	 */
 	EAttribute getCategoria_NomeCategoria();
 
 	/**
-	 * Returns the meta object for the reference '{@link ecommerce.ecommerce.Categoria#getProduto <em>Produto</em>}'.
+	 * Returns the meta object for the reference '{@link Categoria#getProduto <em>Produto</em>}'.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @return the meta object for the reference '<em>Produto</em>'.
-	 * @see ecommerce.ecommerce.Categoria#getProduto()
+	 * @see Categoria#getProduto()
 	 * @see #getCategoria()
 	 * @generated
 	 */
 	EReference getCategoria_Produto();
 
 	/**
-	 * Returns the meta object for class '{@link ecommerce.ecommerce.ItemPedido <em>Item Pedido</em>}'.
+	 * Returns the meta object for class '{@link ItemPedido <em>Item Pedido</em>}'.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @return the meta object for class '<em>Item Pedido</em>'.
-	 * @see ecommerce.ecommerce.ItemPedido
+	 * @see ItemPedido
 	 * @generated
 	 */
 	EClass getItemPedido();
 
 	/**
-	 * Returns the meta object for the attribute '{@link ecommerce.ecommerce.ItemPedido#getCodPedido <em>Cod Pedido</em>}'.
+	 * Returns the meta object for the attribute '{@link ItemPedido#getCodPedido <em>Cod Pedido</em>}'.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @return the meta object for the attribute '<em>Cod Pedido</em>'.
-	 * @see ecommerce.ecommerce.ItemPedido#getCodPedido()
+	 * @see ItemPedido#getCodPedido()
 	 * @see #getItemPedido()
 	 * @generated
 	 */
 	EAttribute getItemPedido_CodPedido();
 
 	/**
-	 * Returns the meta object for the attribute '{@link ecommerce.ecommerce.ItemPedido#getCodProduto <em>Cod Produto</em>}'.
+	 * Returns the meta object for the attribute '{@link ItemPedido#getCodProduto <em>Cod Produto</em>}'.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @return the meta object for the attribute '<em>Cod Produto</em>'.
-	 * @see ecommerce.ecommerce.ItemPedido#getCodProduto()
+	 * @see ItemPedido#getCodProduto()
 	 * @see #getItemPedido()
 	 * @generated
 	 */
 	EAttribute getItemPedido_CodProduto();
 
 	/**
-	 * Returns the meta object for the attribute '{@link ecommerce.ecommerce.ItemPedido#getQuantidade <em>Quantidade</em>}'.
+	 * Returns the meta object for the attribute '{@link ItemPedido#getQuantidade <em>Quantidade</em>}'.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @return the meta object for the attribute '<em>Quantidade</em>'.
-	 * @see ecommerce.ecommerce.ItemPedido#getQuantidade()
+	 * @see ItemPedido#getQuantidade()
 	 * @see #getItemPedido()
 	 * @generated
 	 */
 	EAttribute getItemPedido_Quantidade();
 
 	/**
-	 * Returns the meta object for the reference list '{@link ecommerce.ecommerce.ItemPedido#getPedido <em>Pedido</em>}'.
+	 * Returns the meta object for the reference list '{@link ItemPedido#getPedido <em>Pedido</em>}'.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @return the meta object for the reference list '<em>Pedido</em>'.
-	 * @see ecommerce.ecommerce.ItemPedido#getPedido()
+	 * @see ItemPedido#getPedido()
 	 * @see #getItemPedido()
 	 * @generated
 	 */
@@ -832,11 +831,11 @@ public interface EcommercePackage extends EPackage {
 	 */
 	interface Literals {
 		/**
-		 * The meta object literal for the '{@link ecommerce.ecommerce.impl.ClienteImpl <em>Cliente</em>}' class.
+		 * The meta object literal for the '{@link com.example.ecommerce.model.impl.ClienteImpl <em>Cliente</em>}' class.
 		 * <!-- begin-user-doc -->
 		 * <!-- end-user-doc -->
-		 * @see ecommerce.ecommerce.impl.ClienteImpl
-		 * @see ecommerce.ecommerce.impl.EcommercePackageImpl#getCliente()
+		 * @see com.example.ecommerce.model.impl.ClienteImpl
+		 * @see com.example.ecommerce.model.impl.EcommercePackageImpl#getCliente()
 		 * @generated
 		 */
 		EClass CLIENTE = eINSTANCE.getCliente();
@@ -914,11 +913,11 @@ public interface EcommercePackage extends EPackage {
 		EReference CLIENTE__PEDIDO = eINSTANCE.getCliente_Pedido();
 
 		/**
-		 * The meta object literal for the '{@link ecommerce.ecommerce.impl.PedidoImpl <em>Pedido</em>}' class.
+		 * The meta object literal for the '{@link com.example.ecommerce.model.impl.PedidoImpl <em>Pedido</em>}' class.
 		 * <!-- begin-user-doc -->
 		 * <!-- end-user-doc -->
-		 * @see ecommerce.ecommerce.impl.PedidoImpl
-		 * @see ecommerce.ecommerce.impl.EcommercePackageImpl#getPedido()
+		 * @see com.example.ecommerce.model.impl.PedidoImpl
+		 * @see com.example.ecommerce.model.impl.EcommercePackageImpl#getPedido()
 		 * @generated
 		 */
 		EClass PEDIDO = eINSTANCE.getPedido();
@@ -932,12 +931,12 @@ public interface EcommercePackage extends EPackage {
 		EAttribute PEDIDO__COD_PEDIDO = eINSTANCE.getPedido_CodPedido();
 
 		/**
-		 * The meta object literal for the '<em><b>Data Pedido</b></em>' containment reference feature.
+		 * The meta object literal for the '<em><b>Data Pedido</b></em>' attribute feature.
 		 * <!-- begin-user-doc -->
 		 * <!-- end-user-doc -->
 		 * @generated
 		 */
-		EReference PEDIDO__DATA_PEDIDO = eINSTANCE.getPedido_DataPedido();
+		EAttribute PEDIDO__DATA_PEDIDO = eINSTANCE.getPedido_DataPedido();
 
 		/**
 		 * The meta object literal for the '<em><b>Cpf</b></em>' attribute feature.
@@ -972,11 +971,11 @@ public interface EcommercePackage extends EPackage {
 		EReference PEDIDO__CLIENTE = eINSTANCE.getPedido_Cliente();
 
 		/**
-		 * The meta object literal for the '{@link ecommerce.ecommerce.impl.ProdutoImpl <em>Produto</em>}' class.
+		 * The meta object literal for the '{@link com.example.ecommerce.model.impl.ProdutoImpl <em>Produto</em>}' class.
 		 * <!-- begin-user-doc -->
 		 * <!-- end-user-doc -->
-		 * @see ecommerce.ecommerce.impl.ProdutoImpl
-		 * @see ecommerce.ecommerce.impl.EcommercePackageImpl#getProduto()
+		 * @see com.example.ecommerce.model.impl.ProdutoImpl
+		 * @see com.example.ecommerce.model.impl.EcommercePackageImpl#getProduto()
 		 * @generated
 		 */
 		EClass PRODUTO = eINSTANCE.getProduto();
@@ -998,12 +997,12 @@ public interface EcommercePackage extends EPackage {
 		EAttribute PRODUTO__NOME_PRODUTO = eINSTANCE.getProduto_NomeProduto();
 
 		/**
-		 * The meta object literal for the '<em><b>Preco Produto</b></em>' containment reference feature.
+		 * The meta object literal for the '<em><b>Preco Produto</b></em>' attribute feature.
 		 * <!-- begin-user-doc -->
 		 * <!-- end-user-doc -->
 		 * @generated
 		 */
-		EReference PRODUTO__PRECO_PRODUTO = eINSTANCE.getProduto_PrecoProduto();
+		EAttribute PRODUTO__PRECO_PRODUTO = eINSTANCE.getProduto_PrecoProduto();
 
 		/**
 		 * The meta object literal for the '<em><b>Qtde Estoque</b></em>' attribute feature.
@@ -1030,11 +1029,11 @@ public interface EcommercePackage extends EPackage {
 		EReference PRODUTO__PEDIDO = eINSTANCE.getProduto_Pedido();
 
 		/**
-		 * The meta object literal for the '{@link ecommerce.ecommerce.impl.CategoriaImpl <em>Categoria</em>}' class.
+		 * The meta object literal for the '{@link com.example.ecommerce.model.impl.CategoriaImpl <em>Categoria</em>}' class.
 		 * <!-- begin-user-doc -->
 		 * <!-- end-user-doc -->
-		 * @see ecommerce.ecommerce.impl.CategoriaImpl
-		 * @see ecommerce.ecommerce.impl.EcommercePackageImpl#getCategoria()
+		 * @see com.example.ecommerce.model.impl.CategoriaImpl
+		 * @see com.example.ecommerce.model.impl.EcommercePackageImpl#getCategoria()
 		 * @generated
 		 */
 		EClass CATEGORIA = eINSTANCE.getCategoria();
@@ -1064,11 +1063,11 @@ public interface EcommercePackage extends EPackage {
 		EReference CATEGORIA__PRODUTO = eINSTANCE.getCategoria_Produto();
 
 		/**
-		 * The meta object literal for the '{@link ecommerce.ecommerce.impl.ItemPedidoImpl <em>Item Pedido</em>}' class.
+		 * The meta object literal for the '{@link com.example.ecommerce.model.impl.ItemPedidoImpl <em>Item Pedido</em>}' class.
 		 * <!-- begin-user-doc -->
 		 * <!-- end-user-doc -->
-		 * @see ecommerce.ecommerce.impl.ItemPedidoImpl
-		 * @see ecommerce.ecommerce.impl.EcommercePackageImpl#getItemPedido()
+		 * @see com.example.ecommerce.model.impl.ItemPedidoImpl
+		 * @see com.example.ecommerce.model.impl.EcommercePackageImpl#getItemPedido()
 		 * @generated
 		 */
 		EClass ITEM_PEDIDO = eINSTANCE.getItemPedido();

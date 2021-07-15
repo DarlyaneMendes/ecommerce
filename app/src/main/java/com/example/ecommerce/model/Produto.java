@@ -1,6 +1,6 @@
 /**
  */
-package com.example.ecommerce.model.ecommerce.ecommerce;
+package com.example.ecommerce.model;
 
 import org.eclipse.emf.common.util.EList;
 
@@ -13,17 +13,17 @@ import org.eclipse.emf.ecore.EObject;
  *
  * <p>
  * The following features are supported:
- * <ul>
- *   <li>{@link ecommerce.ecommerce.Produto#getCodProduto <em>Cod Produto</em>}</li>
- *   <li>{@link ecommerce.ecommerce.Produto#getNomeProduto <em>Nome Produto</em>}</li>
- *   <li>{@link ecommerce.ecommerce.Produto#getPrecoProduto <em>Preco Produto</em>}</li>
- *   <li>{@link ecommerce.ecommerce.Produto#getQtdeEstoque <em>Qtde Estoque</em>}</li>
- *   <li>{@link ecommerce.ecommerce.Produto#getCategoria <em>Categoria</em>}</li>
- *   <li>{@link ecommerce.ecommerce.Produto#getPedido <em>Pedido</em>}</li>
- * </ul>
  * </p>
+ * <ul>
+ *   <li>{@link Produto#getCodProduto <em>Cod Produto</em>}</li>
+ *   <li>{@link Produto#getNomeProduto <em>Nome Produto</em>}</li>
+ *   <li>{@link Produto#getPrecoProduto <em>Preco Produto</em>}</li>
+ *   <li>{@link Produto#getQtdeEstoque <em>Qtde Estoque</em>}</li>
+ *   <li>{@link Produto#getCategoria <em>Categoria</em>}</li>
+ *   <li>{@link Produto#getPedido <em>Pedido</em>}</li>
+ * </ul>
  *
- * @see ecommerce.ecommerce.EcommercePackage#getProduto()
+ * @see EcommercePackage#getProduto()
  * @model
  * @generated
  */
@@ -38,14 +38,14 @@ public interface Produto extends EObject {
 	 * <!-- end-user-doc -->
 	 * @return the value of the '<em>Cod Produto</em>' attribute.
 	 * @see #setCodProduto(String)
-	 * @see ecommerce.ecommerce.EcommercePackage#getProduto_CodProduto()
+	 * @see EcommercePackage#getProduto_CodProduto()
 	 * @model dataType="org.eclipse.uml2.types.String" required="true" ordered="false"
 	 * @generated
 	 */
 	String getCodProduto();
 
 	/**
-	 * Sets the value of the '{@link ecommerce.ecommerce.Produto#getCodProduto <em>Cod Produto</em>}' attribute.
+	 * Sets the value of the '{@link Produto#getCodProduto <em>Cod Produto</em>}' attribute.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @param value the new value of the '<em>Cod Produto</em>' attribute.
@@ -64,14 +64,14 @@ public interface Produto extends EObject {
 	 * <!-- end-user-doc -->
 	 * @return the value of the '<em>Nome Produto</em>' attribute.
 	 * @see #setNomeProduto(String)
-	 * @see ecommerce.ecommerce.EcommercePackage#getProduto_NomeProduto()
+	 * @see EcommercePackage#getProduto_NomeProduto()
 	 * @model dataType="org.eclipse.uml2.types.String" required="true" ordered="false"
 	 * @generated
 	 */
 	String getNomeProduto();
 
 	/**
-	 * Sets the value of the '{@link ecommerce.ecommerce.Produto#getNomeProduto <em>Nome Produto</em>}' attribute.
+	 * Sets the value of the '{@link Produto#getNomeProduto <em>Nome Produto</em>}' attribute.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @param value the new value of the '<em>Nome Produto</em>' attribute.
@@ -81,30 +81,30 @@ public interface Produto extends EObject {
 	void setNomeProduto(String value);
 
 	/**
-	 * Returns the value of the '<em><b>Preco Produto</b></em>' containment reference.
+	 * Returns the value of the '<em><b>Preco Produto</b></em>' attribute.
 	 * <!-- begin-user-doc -->
 	 * <p>
-	 * If the meaning of the '<em>Preco Produto</em>' containment reference isn't clear,
+	 * If the meaning of the '<em>Preco Produto</em>' attribute isn't clear,
 	 * there really should be more of a description here...
 	 * </p>
 	 * <!-- end-user-doc -->
-	 * @return the value of the '<em>Preco Produto</em>' containment reference.
-	 * @see #setPrecoProduto(ecommerce.long)
-	 * @see ecommerce.ecommerce.EcommercePackage#getProduto_PrecoProduto()
-	 * @model containment="true" required="true" ordered="false"
+	 * @return the value of the '<em>Preco Produto</em>' attribute.
+	 * @see #setPrecoProduto(double)
+	 * @see EcommercePackage#getProduto_PrecoProduto()
+	 * @model dataType="org.eclipse.uml2.types.Real"
 	 * @generated
 	 */
-	ecommerce.long getPrecoProduto();
+	double getPrecoProduto();
 
 	/**
-	 * Sets the value of the '{@link ecommerce.ecommerce.Produto#getPrecoProduto <em>Preco Produto</em>}' containment reference.
+	 * Sets the value of the '{@link Produto#getPrecoProduto <em>Preco Produto</em>}' attribute.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
-	 * @param value the new value of the '<em>Preco Produto</em>' containment reference.
+	 * @param value the new value of the '<em>Preco Produto</em>' attribute.
 	 * @see #getPrecoProduto()
 	 * @generated
 	 */
-	void setPrecoProduto(ecommerce.long value);
+	void setPrecoProduto(double value);
 
 	/**
 	 * Returns the value of the '<em><b>Qtde Estoque</b></em>' attribute.
@@ -116,14 +116,14 @@ public interface Produto extends EObject {
 	 * <!-- end-user-doc -->
 	 * @return the value of the '<em>Qtde Estoque</em>' attribute.
 	 * @see #setQtdeEstoque(int)
-	 * @see ecommerce.ecommerce.EcommercePackage#getProduto_QtdeEstoque()
+	 * @see EcommercePackage#getProduto_QtdeEstoque()
 	 * @model dataType="org.eclipse.uml2.types.Integer" required="true" ordered="false"
 	 * @generated
 	 */
 	int getQtdeEstoque();
 
 	/**
-	 * Sets the value of the '{@link ecommerce.ecommerce.Produto#getQtdeEstoque <em>Qtde Estoque</em>}' attribute.
+	 * Sets the value of the '{@link Produto#getQtdeEstoque <em>Qtde Estoque</em>}' attribute.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @param value the new value of the '<em>Qtde Estoque</em>' attribute.
@@ -134,8 +134,8 @@ public interface Produto extends EObject {
 
 	/**
 	 * Returns the value of the '<em><b>Categoria</b></em>' reference list.
-	 * The list contents are of type {@link ecommerce.ecommerce.Categoria}.
-	 * It is bidirectional and its opposite is '{@link ecommerce.ecommerce.Categoria#getProduto <em>Produto</em>}'.
+	 * The list contents are of type {@link Categoria}.
+	 * It is bidirectional and its opposite is '{@link Categoria#getProduto <em>Produto</em>}'.
 	 * <!-- begin-user-doc -->
 	 * <p>
 	 * If the meaning of the '<em>Categoria</em>' reference list isn't clear,
@@ -143,8 +143,8 @@ public interface Produto extends EObject {
 	 * </p>
 	 * <!-- end-user-doc -->
 	 * @return the value of the '<em>Categoria</em>' reference list.
-	 * @see ecommerce.ecommerce.EcommercePackage#getProduto_Categoria()
-	 * @see ecommerce.ecommerce.Categoria#getProduto
+	 * @see EcommercePackage#getProduto_Categoria()
+	 * @see Categoria#getProduto
 	 * @model opposite="produto" ordered="false"
 	 * @generated
 	 */
@@ -152,8 +152,8 @@ public interface Produto extends EObject {
 
 	/**
 	 * Returns the value of the '<em><b>Pedido</b></em>' reference list.
-	 * The list contents are of type {@link ecommerce.ecommerce.Pedido}.
-	 * It is bidirectional and its opposite is '{@link ecommerce.ecommerce.Pedido#getProduto <em>Produto</em>}'.
+	 * The list contents are of type {@link Pedido}.
+	 * It is bidirectional and its opposite is '{@link Pedido#getProduto <em>Produto</em>}'.
 	 * <!-- begin-user-doc -->
 	 * <p>
 	 * If the meaning of the '<em>Pedido</em>' reference list isn't clear,
@@ -161,8 +161,8 @@ public interface Produto extends EObject {
 	 * </p>
 	 * <!-- end-user-doc -->
 	 * @return the value of the '<em>Pedido</em>' reference list.
-	 * @see ecommerce.ecommerce.EcommercePackage#getProduto_Pedido()
-	 * @see ecommerce.ecommerce.Pedido#getProduto
+	 * @see EcommercePackage#getProduto_Pedido()
+	 * @see Pedido#getProduto
 	 * @model opposite="produto" required="true" ordered="false"
 	 * @generated
 	 */

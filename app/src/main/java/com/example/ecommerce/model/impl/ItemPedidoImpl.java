@@ -1,10 +1,6 @@
 /**
  */
-package com.example.ecommerce.model.ecommerce.ecommerce.impl;
-
-import ecommerce.ecommerce.EcommercePackage;
-import ecommerce.ecommerce.ItemPedido;
-import ecommerce.ecommerce.Pedido;
+package com.example.ecommerce.model.impl;
 
 import java.util.Collection;
 
@@ -22,19 +18,23 @@ import org.eclipse.emf.ecore.impl.MinimalEObjectImpl;
 import org.eclipse.emf.ecore.util.EObjectWithInverseResolvingEList;
 import org.eclipse.emf.ecore.util.InternalEList;
 
+import com.example.ecommerce.model.EcommercePackage;
+import com.example.ecommerce.model.ItemPedido;
+import com.example.ecommerce.model.Pedido;
+
 /**
  * <!-- begin-user-doc -->
  * An implementation of the model object '<em><b>Item Pedido</b></em>'.
  * <!-- end-user-doc -->
  * <p>
  * The following features are implemented:
- * <ul>
- *   <li>{@link ecommerce.ecommerce.impl.ItemPedidoImpl#getCodPedido <em>Cod Pedido</em>}</li>
- *   <li>{@link ecommerce.ecommerce.impl.ItemPedidoImpl#getCodProduto <em>Cod Produto</em>}</li>
- *   <li>{@link ecommerce.ecommerce.impl.ItemPedidoImpl#getQuantidade <em>Quantidade</em>}</li>
- *   <li>{@link ecommerce.ecommerce.impl.ItemPedidoImpl#getPedido <em>Pedido</em>}</li>
- * </ul>
  * </p>
+ * <ul>
+ *   <li>{@link ItemPedidoImpl#getCodPedido <em>Cod Pedido</em>}</li>
+ *   <li>{@link ItemPedidoImpl#getCodProduto <em>Cod Produto</em>}</li>
+ *   <li>{@link ItemPedidoImpl#getQuantidade <em>Quantidade</em>}</li>
+ *   <li>{@link ItemPedidoImpl#getPedido <em>Pedido</em>}</li>
+ * </ul>
  *
  * @generated
  */
@@ -331,7 +331,7 @@ public class ItemPedidoImpl extends MinimalEObjectImpl.Container implements Item
 	public String toString() {
 		if (eIsProxy()) return super.toString();
 
-		StringBuffer result = new StringBuffer(super.toString());
+		StringBuilder result = new StringBuilder(super.toString());
 		result.append(" (codPedido: ");
 		result.append(codPedido);
 		result.append(", codProduto: ");

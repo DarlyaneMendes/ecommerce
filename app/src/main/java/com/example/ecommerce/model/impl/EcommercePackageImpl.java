@@ -1,14 +1,6 @@
 /**
  */
-package com.example.ecommerce.model.ecommerce.ecommerce.impl;
-
-import ecommerce.ecommerce.Categoria;
-import ecommerce.ecommerce.Cliente;
-import com.example.ecommerce.ecommerce.EcommerceFactory;
-import ecommerce.ecommerce.EcommercePackage;
-import ecommerce.ecommerce.ItemPedido;
-import ecommerce.ecommerce.Pedido;
-import ecommerce.ecommerce.Produto;
+package com.example.ecommerce.model.impl;
 
 import org.eclipse.emf.ecore.EAttribute;
 import org.eclipse.emf.ecore.EClass;
@@ -18,6 +10,14 @@ import org.eclipse.emf.ecore.EReference;
 import org.eclipse.emf.ecore.impl.EPackageImpl;
 
 import org.eclipse.uml2.types.TypesPackage;
+
+import com.example.ecommerce.model.Categoria;
+import com.example.ecommerce.model.Cliente;
+import com.example.ecommerce.model.EcommerceFactory;
+import com.example.ecommerce.model.EcommercePackage;
+import com.example.ecommerce.model.ItemPedido;
+import com.example.ecommerce.model.Pedido;
+import com.example.ecommerce.model.Produto;
 
 /**
  * <!-- begin-user-doc -->
@@ -63,7 +63,7 @@ public class EcommercePackageImpl extends EPackageImpl implements EcommercePacka
 
 	/**
 	 * Creates an instance of the model <b>Package</b>, registered with
-	 * {@link org.eclipse.emf.ecore.EPackage.Registry EPackage.Registry} by the package
+	 * {@link Registry EPackage.Registry} by the package
 	 * package URI value.
 	 * <p>Note: the correct way to create the package is via the static
 	 * factory method {@link #init init()}, which also performs
@@ -71,8 +71,8 @@ public class EcommercePackageImpl extends EPackageImpl implements EcommercePacka
 	 * if one already exists.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
-	 * @see org.eclipse.emf.ecore.EPackage.Registry
-	 * @see ecommerce.ecommerce.EcommercePackage#eNS_URI
+	 * @see Registry
+	 * @see EcommercePackage#eNS_URI
 	 * @see #init()
 	 * @generated
 	 */
@@ -100,10 +100,10 @@ public class EcommercePackageImpl extends EPackageImpl implements EcommercePacka
 	 * @generated
 	 */
 	public static EcommercePackage init() {
-		if (isInited) return (EcommercePackage)EPackage.Registry.INSTANCE.getEPackage(EcommercePackage.eNS_URI);
+		if (isInited) return (EcommercePackage) Registry.INSTANCE.getEPackage(EcommercePackage.eNS_URI);
 
 		// Obtain or create and register package
-		Object registeredEcommercePackage = EPackage.Registry.INSTANCE.get(eNS_URI);
+		Object registeredEcommercePackage = Registry.INSTANCE.get(eNS_URI);
 		EcommercePackageImpl theEcommercePackage = registeredEcommercePackage instanceof EcommercePackageImpl ? (EcommercePackageImpl)registeredEcommercePackage : new EcommercePackageImpl();
 
 		isInited = true;
@@ -111,23 +111,17 @@ public class EcommercePackageImpl extends EPackageImpl implements EcommercePacka
 		// Initialize simple dependencies
 		TypesPackage.eINSTANCE.eClass();
 
-		// Obtain or create and register interdependencies
-		Object registeredPackage = EPackage.Registry.INSTANCE.getEPackage(ecommerce.EcommercePackage.eNS_URI);
-		ecommerce.impl.EcommercePackageImpl theEcommercePackage_1 = (ecommerce.impl.EcommercePackageImpl)(registeredPackage instanceof ecommerce.impl.EcommercePackageImpl ? registeredPackage : ecommerce.EcommercePackage.eINSTANCE);
-
 		// Create package meta-data objects
 		theEcommercePackage.createPackageContents();
-		theEcommercePackage_1.createPackageContents();
 
 		// Initialize created meta-data
 		theEcommercePackage.initializePackageContents();
-		theEcommercePackage_1.initializePackageContents();
 
 		// Mark meta-data to indicate it can't be changed
 		theEcommercePackage.freeze();
 
 		// Update the registry and return the package
-		EPackage.Registry.INSTANCE.put(EcommercePackage.eNS_URI, theEcommercePackage);
+		Registry.INSTANCE.put(EcommercePackage.eNS_URI, theEcommercePackage);
 		return theEcommercePackage;
 	}
 
@@ -244,8 +238,8 @@ public class EcommercePackageImpl extends EPackageImpl implements EcommercePacka
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	public EReference getPedido_DataPedido() {
-		return (EReference)pedidoEClass.getEStructuralFeatures().get(1);
+	public EAttribute getPedido_DataPedido() {
+		return (EAttribute)pedidoEClass.getEStructuralFeatures().get(1);
 	}
 
 	/**
@@ -316,8 +310,8 @@ public class EcommercePackageImpl extends EPackageImpl implements EcommercePacka
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	public EReference getProduto_PrecoProduto() {
-		return (EReference)produtoEClass.getEStructuralFeatures().get(2);
+	public EAttribute getProduto_PrecoProduto() {
+		return (EAttribute)produtoEClass.getEStructuralFeatures().get(2);
 	}
 
 	/**
@@ -469,7 +463,7 @@ public class EcommercePackageImpl extends EPackageImpl implements EcommercePacka
 
 		pedidoEClass = createEClass(PEDIDO);
 		createEAttribute(pedidoEClass, PEDIDO__COD_PEDIDO);
-		createEReference(pedidoEClass, PEDIDO__DATA_PEDIDO);
+		createEAttribute(pedidoEClass, PEDIDO__DATA_PEDIDO);
 		createEAttribute(pedidoEClass, PEDIDO__CPF);
 		createEReference(pedidoEClass, PEDIDO__PRODUTO);
 		createEReference(pedidoEClass, PEDIDO__ITEM_PEDIDO);
@@ -478,7 +472,7 @@ public class EcommercePackageImpl extends EPackageImpl implements EcommercePacka
 		produtoEClass = createEClass(PRODUTO);
 		createEAttribute(produtoEClass, PRODUTO__COD_PRODUTO);
 		createEAttribute(produtoEClass, PRODUTO__NOME_PRODUTO);
-		createEReference(produtoEClass, PRODUTO__PRECO_PRODUTO);
+		createEAttribute(produtoEClass, PRODUTO__PRECO_PRODUTO);
 		createEAttribute(produtoEClass, PRODUTO__QTDE_ESTOQUE);
 		createEReference(produtoEClass, PRODUTO__CATEGORIA);
 		createEReference(produtoEClass, PRODUTO__PEDIDO);
@@ -519,8 +513,7 @@ public class EcommercePackageImpl extends EPackageImpl implements EcommercePacka
 		setNsURI(eNS_URI);
 
 		// Obtain other dependent packages
-		TypesPackage theTypesPackage = (TypesPackage)EPackage.Registry.INSTANCE.getEPackage(TypesPackage.eNS_URI);
-		ecommerce.EcommercePackage theEcommercePackage_1 = (ecommerce.EcommercePackage)EPackage.Registry.INSTANCE.getEPackage(ecommerce.EcommercePackage.eNS_URI);
+		TypesPackage theTypesPackage = (TypesPackage) Registry.INSTANCE.getEPackage(TypesPackage.eNS_URI);
 
 		// Create type parameters
 
@@ -542,7 +535,7 @@ public class EcommercePackageImpl extends EPackageImpl implements EcommercePacka
 
 		initEClass(pedidoEClass, Pedido.class, "Pedido", !IS_ABSTRACT, !IS_INTERFACE, IS_GENERATED_INSTANCE_CLASS);
 		initEAttribute(getPedido_CodPedido(), theTypesPackage.getString(), "codPedido", null, 1, 1, Pedido.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_UNSETTABLE, !IS_ID, IS_UNIQUE, !IS_DERIVED, !IS_ORDERED);
-		initEReference(getPedido_DataPedido(), theEcommercePackage_1.getdate(), null, "dataPedido", null, 1, 1, Pedido.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, IS_COMPOSITE, !IS_RESOLVE_PROXIES, !IS_UNSETTABLE, IS_UNIQUE, !IS_DERIVED, !IS_ORDERED);
+		initEAttribute(getPedido_DataPedido(), ecorePackage.getEDate(), "dataPedido", null, 0, 1, Pedido.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_UNSETTABLE, !IS_ID, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
 		initEAttribute(getPedido_Cpf(), theTypesPackage.getString(), "cpf", null, 1, 1, Pedido.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_UNSETTABLE, !IS_ID, IS_UNIQUE, !IS_DERIVED, !IS_ORDERED);
 		initEReference(getPedido_Produto(), this.getProduto(), this.getProduto_Pedido(), "produto", null, 1, -1, Pedido.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_COMPOSITE, IS_RESOLVE_PROXIES, !IS_UNSETTABLE, IS_UNIQUE, !IS_DERIVED, !IS_ORDERED);
 		initEReference(getPedido_ItemPedido(), this.getItemPedido(), this.getItemPedido_Pedido(), "itemPedido", null, 0, -1, Pedido.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_COMPOSITE, IS_RESOLVE_PROXIES, !IS_UNSETTABLE, IS_UNIQUE, !IS_DERIVED, !IS_ORDERED);
@@ -551,7 +544,7 @@ public class EcommercePackageImpl extends EPackageImpl implements EcommercePacka
 		initEClass(produtoEClass, Produto.class, "Produto", !IS_ABSTRACT, !IS_INTERFACE, IS_GENERATED_INSTANCE_CLASS);
 		initEAttribute(getProduto_CodProduto(), theTypesPackage.getString(), "codProduto", null, 1, 1, Produto.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_UNSETTABLE, !IS_ID, IS_UNIQUE, !IS_DERIVED, !IS_ORDERED);
 		initEAttribute(getProduto_NomeProduto(), theTypesPackage.getString(), "nomeProduto", null, 1, 1, Produto.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_UNSETTABLE, !IS_ID, IS_UNIQUE, !IS_DERIVED, !IS_ORDERED);
-		initEReference(getProduto_PrecoProduto(), theEcommercePackage_1.getlong(), null, "precoProduto", null, 1, 1, Produto.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, IS_COMPOSITE, !IS_RESOLVE_PROXIES, !IS_UNSETTABLE, IS_UNIQUE, !IS_DERIVED, !IS_ORDERED);
+		initEAttribute(getProduto_PrecoProduto(), theTypesPackage.getReal(), "precoProduto", null, 0, 1, Produto.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_UNSETTABLE, !IS_ID, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
 		initEAttribute(getProduto_QtdeEstoque(), theTypesPackage.getInteger(), "qtdeEstoque", null, 1, 1, Produto.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_UNSETTABLE, !IS_ID, IS_UNIQUE, !IS_DERIVED, !IS_ORDERED);
 		initEReference(getProduto_Categoria(), this.getCategoria(), this.getCategoria_Produto(), "categoria", null, 0, -1, Produto.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_COMPOSITE, IS_RESOLVE_PROXIES, !IS_UNSETTABLE, IS_UNIQUE, !IS_DERIVED, !IS_ORDERED);
 		initEReference(getProduto_Pedido(), this.getPedido(), this.getPedido_Produto(), "pedido", null, 1, -1, Produto.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_COMPOSITE, IS_RESOLVE_PROXIES, !IS_UNSETTABLE, IS_UNIQUE, !IS_DERIVED, !IS_ORDERED);
@@ -566,6 +559,9 @@ public class EcommercePackageImpl extends EPackageImpl implements EcommercePacka
 		initEAttribute(getItemPedido_CodProduto(), theTypesPackage.getString(), "codProduto", null, 1, 1, ItemPedido.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_UNSETTABLE, !IS_ID, IS_UNIQUE, !IS_DERIVED, !IS_ORDERED);
 		initEAttribute(getItemPedido_Quantidade(), theTypesPackage.getInteger(), "quantidade", null, 1, 1, ItemPedido.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_UNSETTABLE, !IS_ID, IS_UNIQUE, !IS_DERIVED, !IS_ORDERED);
 		initEReference(getItemPedido_Pedido(), this.getPedido(), this.getPedido_ItemPedido(), "pedido", null, 1, -1, ItemPedido.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_COMPOSITE, IS_RESOLVE_PROXIES, !IS_UNSETTABLE, IS_UNIQUE, !IS_DERIVED, !IS_ORDERED);
+
+		// Create resource
+		createResource(eNS_URI);
 	}
 
 } //EcommercePackageImpl

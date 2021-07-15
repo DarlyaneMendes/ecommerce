@@ -1,16 +1,9 @@
 /**
  */
-package com.example.ecommerce.model.ecommerce.ecommerce.impl;
-
-import ecommerce.date;
-
-import ecommerce.ecommerce.Cliente;
-import ecommerce.ecommerce.EcommercePackage;
-import ecommerce.ecommerce.ItemPedido;
-import ecommerce.ecommerce.Pedido;
-import ecommerce.ecommerce.Produto;
+package com.example.ecommerce.model.impl;
 
 import java.util.Collection;
+import java.util.Date;
 
 import org.eclipse.emf.common.notify.Notification;
 import org.eclipse.emf.common.notify.NotificationChain;
@@ -26,21 +19,27 @@ import org.eclipse.emf.ecore.impl.MinimalEObjectImpl;
 import org.eclipse.emf.ecore.util.EObjectWithInverseResolvingEList;
 import org.eclipse.emf.ecore.util.InternalEList;
 
+import com.example.ecommerce.model.Cliente;
+import com.example.ecommerce.model.EcommercePackage;
+import com.example.ecommerce.model.ItemPedido;
+import com.example.ecommerce.model.Pedido;
+import com.example.ecommerce.model.Produto;
+
 /**
  * <!-- begin-user-doc -->
  * An implementation of the model object '<em><b>Pedido</b></em>'.
  * <!-- end-user-doc -->
  * <p>
  * The following features are implemented:
- * <ul>
- *   <li>{@link ecommerce.ecommerce.impl.PedidoImpl#getCodPedido <em>Cod Pedido</em>}</li>
- *   <li>{@link ecommerce.ecommerce.impl.PedidoImpl#getDataPedido <em>Data Pedido</em>}</li>
- *   <li>{@link ecommerce.ecommerce.impl.PedidoImpl#getCpf <em>Cpf</em>}</li>
- *   <li>{@link ecommerce.ecommerce.impl.PedidoImpl#getProduto <em>Produto</em>}</li>
- *   <li>{@link ecommerce.ecommerce.impl.PedidoImpl#getItemPedido <em>Item Pedido</em>}</li>
- *   <li>{@link ecommerce.ecommerce.impl.PedidoImpl#getCliente <em>Cliente</em>}</li>
- * </ul>
  * </p>
+ * <ul>
+ *   <li>{@link PedidoImpl#getCodPedido <em>Cod Pedido</em>}</li>
+ *   <li>{@link PedidoImpl#getDataPedido <em>Data Pedido</em>}</li>
+ *   <li>{@link PedidoImpl#getCpf <em>Cpf</em>}</li>
+ *   <li>{@link PedidoImpl#getProduto <em>Produto</em>}</li>
+ *   <li>{@link PedidoImpl#getItemPedido <em>Item Pedido</em>}</li>
+ *   <li>{@link PedidoImpl#getCliente <em>Cliente</em>}</li>
+ * </ul>
  *
  * @generated
  */
@@ -66,14 +65,24 @@ public class PedidoImpl extends MinimalEObjectImpl.Container implements Pedido {
 	protected String codPedido = COD_PEDIDO_EDEFAULT;
 
 	/**
-	 * The cached value of the '{@link #getDataPedido() <em>Data Pedido</em>}' containment reference.
+	 * The default value of the '{@link #getDataPedido() <em>Data Pedido</em>}' attribute.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @see #getDataPedido()
 	 * @generated
 	 * @ordered
 	 */
-	protected date dataPedido;
+	protected static final Date DATA_PEDIDO_EDEFAULT = null;
+
+	/**
+	 * The cached value of the '{@link #getDataPedido() <em>Data Pedido</em>}' attribute.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @see #getDataPedido()
+	 * @generated
+	 * @ordered
+	 */
+	protected Date dataPedido = DATA_PEDIDO_EDEFAULT;
 
 	/**
 	 * The default value of the '{@link #getCpf() <em>Cpf</em>}' attribute.
@@ -170,7 +179,7 @@ public class PedidoImpl extends MinimalEObjectImpl.Container implements Pedido {
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	public date getDataPedido() {
+	public Date getDataPedido() {
 		return dataPedido;
 	}
 
@@ -179,33 +188,11 @@ public class PedidoImpl extends MinimalEObjectImpl.Container implements Pedido {
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	public NotificationChain basicSetDataPedido(date newDataPedido, NotificationChain msgs) {
-		date oldDataPedido = dataPedido;
+	public void setDataPedido(Date newDataPedido) {
+		Date oldDataPedido = dataPedido;
 		dataPedido = newDataPedido;
-		if (eNotificationRequired()) {
-			ENotificationImpl notification = new ENotificationImpl(this, Notification.SET, EcommercePackage.PEDIDO__DATA_PEDIDO, oldDataPedido, newDataPedido);
-			if (msgs == null) msgs = notification; else msgs.add(notification);
-		}
-		return msgs;
-	}
-
-	/**
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 */
-	public void setDataPedido(date newDataPedido) {
-		if (newDataPedido != dataPedido) {
-			NotificationChain msgs = null;
-			if (dataPedido != null)
-				msgs = ((InternalEObject)dataPedido).eInverseRemove(this, EOPPOSITE_FEATURE_BASE - EcommercePackage.PEDIDO__DATA_PEDIDO, null, msgs);
-			if (newDataPedido != null)
-				msgs = ((InternalEObject)newDataPedido).eInverseAdd(this, EOPPOSITE_FEATURE_BASE - EcommercePackage.PEDIDO__DATA_PEDIDO, null, msgs);
-			msgs = basicSetDataPedido(newDataPedido, msgs);
-			if (msgs != null) msgs.dispatch();
-		}
-		else if (eNotificationRequired())
-			eNotify(new ENotificationImpl(this, Notification.SET, EcommercePackage.PEDIDO__DATA_PEDIDO, newDataPedido, newDataPedido));
+		if (eNotificationRequired())
+			eNotify(new ENotificationImpl(this, Notification.SET, EcommercePackage.PEDIDO__DATA_PEDIDO, oldDataPedido, dataPedido));
 	}
 
 	/**
@@ -292,8 +279,6 @@ public class PedidoImpl extends MinimalEObjectImpl.Container implements Pedido {
 	@Override
 	public NotificationChain eInverseRemove(InternalEObject otherEnd, int featureID, NotificationChain msgs) {
 		switch (featureID) {
-			case EcommercePackage.PEDIDO__DATA_PEDIDO:
-				return basicSetDataPedido(null, msgs);
 			case EcommercePackage.PEDIDO__PRODUTO:
 				return ((InternalEList<?>)getProduto()).basicRemove(otherEnd, msgs);
 			case EcommercePackage.PEDIDO__ITEM_PEDIDO:
@@ -341,7 +326,7 @@ public class PedidoImpl extends MinimalEObjectImpl.Container implements Pedido {
 				setCodPedido((String)newValue);
 				return;
 			case EcommercePackage.PEDIDO__DATA_PEDIDO:
-				setDataPedido((date)newValue);
+				setDataPedido((Date)newValue);
 				return;
 			case EcommercePackage.PEDIDO__CPF:
 				setCpf((String)newValue);
@@ -374,7 +359,7 @@ public class PedidoImpl extends MinimalEObjectImpl.Container implements Pedido {
 				setCodPedido(COD_PEDIDO_EDEFAULT);
 				return;
 			case EcommercePackage.PEDIDO__DATA_PEDIDO:
-				setDataPedido((date)null);
+				setDataPedido(DATA_PEDIDO_EDEFAULT);
 				return;
 			case EcommercePackage.PEDIDO__CPF:
 				setCpf(CPF_EDEFAULT);
@@ -403,7 +388,7 @@ public class PedidoImpl extends MinimalEObjectImpl.Container implements Pedido {
 			case EcommercePackage.PEDIDO__COD_PEDIDO:
 				return COD_PEDIDO_EDEFAULT == null ? codPedido != null : !COD_PEDIDO_EDEFAULT.equals(codPedido);
 			case EcommercePackage.PEDIDO__DATA_PEDIDO:
-				return dataPedido != null;
+				return DATA_PEDIDO_EDEFAULT == null ? dataPedido != null : !DATA_PEDIDO_EDEFAULT.equals(dataPedido);
 			case EcommercePackage.PEDIDO__CPF:
 				return CPF_EDEFAULT == null ? cpf != null : !CPF_EDEFAULT.equals(cpf);
 			case EcommercePackage.PEDIDO__PRODUTO:
@@ -425,9 +410,11 @@ public class PedidoImpl extends MinimalEObjectImpl.Container implements Pedido {
 	public String toString() {
 		if (eIsProxy()) return super.toString();
 
-		StringBuffer result = new StringBuffer(super.toString());
+		StringBuilder result = new StringBuilder(super.toString());
 		result.append(" (codPedido: ");
 		result.append(codPedido);
+		result.append(", dataPedido: ");
+		result.append(dataPedido);
 		result.append(", cpf: ");
 		result.append(cpf);
 		result.append(')');

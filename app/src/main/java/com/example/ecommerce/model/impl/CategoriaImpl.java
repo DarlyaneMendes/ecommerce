@@ -1,10 +1,6 @@
 /**
  */
-package com.example.ecommerce.model.ecommerce.ecommerce.impl;
-
-import ecommerce.ecommerce.Categoria;
-import ecommerce.ecommerce.EcommercePackage;
-import ecommerce.ecommerce.Produto;
+package com.example.ecommerce.model.impl;
 
 import org.eclipse.emf.common.notify.Notification;
 import org.eclipse.emf.common.notify.NotificationChain;
@@ -15,18 +11,22 @@ import org.eclipse.emf.ecore.InternalEObject;
 import org.eclipse.emf.ecore.impl.ENotificationImpl;
 import org.eclipse.emf.ecore.impl.MinimalEObjectImpl;
 
+import com.example.ecommerce.model.Categoria;
+import com.example.ecommerce.model.EcommercePackage;
+import com.example.ecommerce.model.Produto;
+
 /**
  * <!-- begin-user-doc -->
  * An implementation of the model object '<em><b>Categoria</b></em>'.
  * <!-- end-user-doc -->
  * <p>
  * The following features are implemented:
- * <ul>
- *   <li>{@link ecommerce.ecommerce.impl.CategoriaImpl#getCodCategoria <em>Cod Categoria</em>}</li>
- *   <li>{@link ecommerce.ecommerce.impl.CategoriaImpl#getNomeCategoria <em>Nome Categoria</em>}</li>
- *   <li>{@link ecommerce.ecommerce.impl.CategoriaImpl#getProduto <em>Produto</em>}</li>
- * </ul>
  * </p>
+ * <ul>
+ *   <li>{@link CategoriaImpl#getCodCategoria <em>Cod Categoria</em>}</li>
+ *   <li>{@link CategoriaImpl#getNomeCategoria <em>Nome Categoria</em>}</li>
+ *   <li>{@link CategoriaImpl#getProduto <em>Produto</em>}</li>
+ * </ul>
  *
  * @generated
  */
@@ -320,7 +320,7 @@ public class CategoriaImpl extends MinimalEObjectImpl.Container implements Categ
 	public String toString() {
 		if (eIsProxy()) return super.toString();
 
-		StringBuffer result = new StringBuffer(super.toString());
+		StringBuilder result = new StringBuilder(super.toString());
 		result.append(" (codCategoria: ");
 		result.append(codCategoria);
 		result.append(", nomeCategoria: ");

@@ -1,8 +1,8 @@
 /**
  */
-package com.example.ecommerce.model.ecommerce.ecommerce;
+package com.example.ecommerce.model;
 
-import ecommerce.date;
+import java.util.Date;
 
 import org.eclipse.emf.common.util.EList;
 
@@ -15,17 +15,17 @@ import org.eclipse.emf.ecore.EObject;
  *
  * <p>
  * The following features are supported:
- * <ul>
- *   <li>{@link ecommerce.ecommerce.Pedido#getCodPedido <em>Cod Pedido</em>}</li>
- *   <li>{@link ecommerce.ecommerce.Pedido#getDataPedido <em>Data Pedido</em>}</li>
- *   <li>{@link ecommerce.ecommerce.Pedido#getCpf <em>Cpf</em>}</li>
- *   <li>{@link ecommerce.ecommerce.Pedido#getProduto <em>Produto</em>}</li>
- *   <li>{@link ecommerce.ecommerce.Pedido#getItemPedido <em>Item Pedido</em>}</li>
- *   <li>{@link ecommerce.ecommerce.Pedido#getCliente <em>Cliente</em>}</li>
- * </ul>
  * </p>
+ * <ul>
+ *   <li>{@link Pedido#getCodPedido <em>Cod Pedido</em>}</li>
+ *   <li>{@link Pedido#getDataPedido <em>Data Pedido</em>}</li>
+ *   <li>{@link Pedido#getCpf <em>Cpf</em>}</li>
+ *   <li>{@link Pedido#getProduto <em>Produto</em>}</li>
+ *   <li>{@link Pedido#getItemPedido <em>Item Pedido</em>}</li>
+ *   <li>{@link Pedido#getCliente <em>Cliente</em>}</li>
+ * </ul>
  *
- * @see ecommerce.ecommerce.EcommercePackage#getPedido()
+ * @see EcommercePackage#getPedido()
  * @model
  * @generated
  */
@@ -40,14 +40,14 @@ public interface Pedido extends EObject {
 	 * <!-- end-user-doc -->
 	 * @return the value of the '<em>Cod Pedido</em>' attribute.
 	 * @see #setCodPedido(String)
-	 * @see ecommerce.ecommerce.EcommercePackage#getPedido_CodPedido()
+	 * @see EcommercePackage#getPedido_CodPedido()
 	 * @model dataType="org.eclipse.uml2.types.String" required="true" ordered="false"
 	 * @generated
 	 */
 	String getCodPedido();
 
 	/**
-	 * Sets the value of the '{@link ecommerce.ecommerce.Pedido#getCodPedido <em>Cod Pedido</em>}' attribute.
+	 * Sets the value of the '{@link Pedido#getCodPedido <em>Cod Pedido</em>}' attribute.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @param value the new value of the '<em>Cod Pedido</em>' attribute.
@@ -57,30 +57,30 @@ public interface Pedido extends EObject {
 	void setCodPedido(String value);
 
 	/**
-	 * Returns the value of the '<em><b>Data Pedido</b></em>' containment reference.
+	 * Returns the value of the '<em><b>Data Pedido</b></em>' attribute.
 	 * <!-- begin-user-doc -->
 	 * <p>
-	 * If the meaning of the '<em>Data Pedido</em>' containment reference isn't clear,
+	 * If the meaning of the '<em>Data Pedido</em>' attribute isn't clear,
 	 * there really should be more of a description here...
 	 * </p>
 	 * <!-- end-user-doc -->
-	 * @return the value of the '<em>Data Pedido</em>' containment reference.
-	 * @see #setDataPedido(date)
-	 * @see ecommerce.ecommerce.EcommercePackage#getPedido_DataPedido()
-	 * @model containment="true" required="true" ordered="false"
+	 * @return the value of the '<em>Data Pedido</em>' attribute.
+	 * @see #setDataPedido(Date)
+	 * @see EcommercePackage#getPedido_DataPedido()
+	 * @model
 	 * @generated
 	 */
-	date getDataPedido();
+	Date getDataPedido();
 
 	/**
-	 * Sets the value of the '{@link ecommerce.ecommerce.Pedido#getDataPedido <em>Data Pedido</em>}' containment reference.
+	 * Sets the value of the '{@link Pedido#getDataPedido <em>Data Pedido</em>}' attribute.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
-	 * @param value the new value of the '<em>Data Pedido</em>' containment reference.
+	 * @param value the new value of the '<em>Data Pedido</em>' attribute.
 	 * @see #getDataPedido()
 	 * @generated
 	 */
-	void setDataPedido(date value);
+	void setDataPedido(Date value);
 
 	/**
 	 * Returns the value of the '<em><b>Cpf</b></em>' attribute.
@@ -92,14 +92,14 @@ public interface Pedido extends EObject {
 	 * <!-- end-user-doc -->
 	 * @return the value of the '<em>Cpf</em>' attribute.
 	 * @see #setCpf(String)
-	 * @see ecommerce.ecommerce.EcommercePackage#getPedido_Cpf()
+	 * @see EcommercePackage#getPedido_Cpf()
 	 * @model dataType="org.eclipse.uml2.types.String" required="true" ordered="false"
 	 * @generated
 	 */
 	String getCpf();
 
 	/**
-	 * Sets the value of the '{@link ecommerce.ecommerce.Pedido#getCpf <em>Cpf</em>}' attribute.
+	 * Sets the value of the '{@link Pedido#getCpf <em>Cpf</em>}' attribute.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @param value the new value of the '<em>Cpf</em>' attribute.
@@ -110,8 +110,8 @@ public interface Pedido extends EObject {
 
 	/**
 	 * Returns the value of the '<em><b>Produto</b></em>' reference list.
-	 * The list contents are of type {@link ecommerce.ecommerce.Produto}.
-	 * It is bidirectional and its opposite is '{@link ecommerce.ecommerce.Produto#getPedido <em>Pedido</em>}'.
+	 * The list contents are of type {@link Produto}.
+	 * It is bidirectional and its opposite is '{@link Produto#getPedido <em>Pedido</em>}'.
 	 * <!-- begin-user-doc -->
 	 * <p>
 	 * If the meaning of the '<em>Produto</em>' reference list isn't clear,
@@ -119,8 +119,8 @@ public interface Pedido extends EObject {
 	 * </p>
 	 * <!-- end-user-doc -->
 	 * @return the value of the '<em>Produto</em>' reference list.
-	 * @see ecommerce.ecommerce.EcommercePackage#getPedido_Produto()
-	 * @see ecommerce.ecommerce.Produto#getPedido
+	 * @see EcommercePackage#getPedido_Produto()
+	 * @see Produto#getPedido
 	 * @model opposite="pedido" required="true" ordered="false"
 	 * @generated
 	 */
@@ -128,8 +128,8 @@ public interface Pedido extends EObject {
 
 	/**
 	 * Returns the value of the '<em><b>Item Pedido</b></em>' reference list.
-	 * The list contents are of type {@link ecommerce.ecommerce.ItemPedido}.
-	 * It is bidirectional and its opposite is '{@link ecommerce.ecommerce.ItemPedido#getPedido <em>Pedido</em>}'.
+	 * The list contents are of type {@link ItemPedido}.
+	 * It is bidirectional and its opposite is '{@link ItemPedido#getPedido <em>Pedido</em>}'.
 	 * <!-- begin-user-doc -->
 	 * <p>
 	 * If the meaning of the '<em>Item Pedido</em>' reference list isn't clear,
@@ -137,8 +137,8 @@ public interface Pedido extends EObject {
 	 * </p>
 	 * <!-- end-user-doc -->
 	 * @return the value of the '<em>Item Pedido</em>' reference list.
-	 * @see ecommerce.ecommerce.EcommercePackage#getPedido_ItemPedido()
-	 * @see ecommerce.ecommerce.ItemPedido#getPedido
+	 * @see EcommercePackage#getPedido_ItemPedido()
+	 * @see ItemPedido#getPedido
 	 * @model opposite="pedido" ordered="false"
 	 * @generated
 	 */
@@ -146,8 +146,8 @@ public interface Pedido extends EObject {
 
 	/**
 	 * Returns the value of the '<em><b>Cliente</b></em>' reference list.
-	 * The list contents are of type {@link ecommerce.ecommerce.Cliente}.
-	 * It is bidirectional and its opposite is '{@link ecommerce.ecommerce.Cliente#getPedido <em>Pedido</em>}'.
+	 * The list contents are of type {@link Cliente}.
+	 * It is bidirectional and its opposite is '{@link Cliente#getPedido <em>Pedido</em>}'.
 	 * <!-- begin-user-doc -->
 	 * <p>
 	 * If the meaning of the '<em>Cliente</em>' reference list isn't clear,
@@ -155,8 +155,8 @@ public interface Pedido extends EObject {
 	 * </p>
 	 * <!-- end-user-doc -->
 	 * @return the value of the '<em>Cliente</em>' reference list.
-	 * @see ecommerce.ecommerce.EcommercePackage#getPedido_Cliente()
-	 * @see ecommerce.ecommerce.Cliente#getPedido
+	 * @see EcommercePackage#getPedido_Cliente()
+	 * @see Cliente#getPedido
 	 * @model opposite="pedido" ordered="false"
 	 * @generated
 	 */

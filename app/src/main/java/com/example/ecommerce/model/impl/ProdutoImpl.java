@@ -1,11 +1,6 @@
 /**
  */
-package com.example.ecommerce.model.ecommerce.ecommerce.impl;
-
-import ecommerce.ecommerce.Categoria;
-import ecommerce.ecommerce.EcommercePackage;
-import ecommerce.ecommerce.Pedido;
-import ecommerce.ecommerce.Produto;
+package com.example.ecommerce.model.impl;
 
 import java.util.Collection;
 
@@ -23,21 +18,26 @@ import org.eclipse.emf.ecore.impl.MinimalEObjectImpl;
 import org.eclipse.emf.ecore.util.EObjectWithInverseResolvingEList;
 import org.eclipse.emf.ecore.util.InternalEList;
 
+import com.example.ecommerce.model.Categoria;
+import com.example.ecommerce.model.EcommercePackage;
+import com.example.ecommerce.model.Pedido;
+import com.example.ecommerce.model.Produto;
+
 /**
  * <!-- begin-user-doc -->
  * An implementation of the model object '<em><b>Produto</b></em>'.
  * <!-- end-user-doc -->
  * <p>
  * The following features are implemented:
- * <ul>
- *   <li>{@link ecommerce.ecommerce.impl.ProdutoImpl#getCodProduto <em>Cod Produto</em>}</li>
- *   <li>{@link ecommerce.ecommerce.impl.ProdutoImpl#getNomeProduto <em>Nome Produto</em>}</li>
- *   <li>{@link ecommerce.ecommerce.impl.ProdutoImpl#getPrecoProduto <em>Preco Produto</em>}</li>
- *   <li>{@link ecommerce.ecommerce.impl.ProdutoImpl#getQtdeEstoque <em>Qtde Estoque</em>}</li>
- *   <li>{@link ecommerce.ecommerce.impl.ProdutoImpl#getCategoria <em>Categoria</em>}</li>
- *   <li>{@link ecommerce.ecommerce.impl.ProdutoImpl#getPedido <em>Pedido</em>}</li>
- * </ul>
  * </p>
+ * <ul>
+ *   <li>{@link ProdutoImpl#getCodProduto <em>Cod Produto</em>}</li>
+ *   <li>{@link ProdutoImpl#getNomeProduto <em>Nome Produto</em>}</li>
+ *   <li>{@link ProdutoImpl#getPrecoProduto <em>Preco Produto</em>}</li>
+ *   <li>{@link ProdutoImpl#getQtdeEstoque <em>Qtde Estoque</em>}</li>
+ *   <li>{@link ProdutoImpl#getCategoria <em>Categoria</em>}</li>
+ *   <li>{@link ProdutoImpl#getPedido <em>Pedido</em>}</li>
+ * </ul>
  *
  * @generated
  */
@@ -83,14 +83,24 @@ public class ProdutoImpl extends MinimalEObjectImpl.Container implements Produto
 	protected String nomeProduto = NOME_PRODUTO_EDEFAULT;
 
 	/**
-	 * The cached value of the '{@link #getPrecoProduto() <em>Preco Produto</em>}' containment reference.
+	 * The default value of the '{@link #getPrecoProduto() <em>Preco Produto</em>}' attribute.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @see #getPrecoProduto()
 	 * @generated
 	 * @ordered
 	 */
-	protected ecommerce.long precoProduto;
+	protected static final double PRECO_PRODUTO_EDEFAULT = 0.0;
+
+	/**
+	 * The cached value of the '{@link #getPrecoProduto() <em>Preco Produto</em>}' attribute.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @see #getPrecoProduto()
+	 * @generated
+	 * @ordered
+	 */
+	protected double precoProduto = PRECO_PRODUTO_EDEFAULT;
 
 	/**
 	 * The default value of the '{@link #getQtdeEstoque() <em>Qtde Estoque</em>}' attribute.
@@ -198,7 +208,7 @@ public class ProdutoImpl extends MinimalEObjectImpl.Container implements Produto
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	public ecommerce.long getPrecoProduto() {
+	public double getPrecoProduto() {
 		return precoProduto;
 	}
 
@@ -207,33 +217,11 @@ public class ProdutoImpl extends MinimalEObjectImpl.Container implements Produto
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	public NotificationChain basicSetPrecoProduto(ecommerce.long newPrecoProduto, NotificationChain msgs) {
-		ecommerce.long oldPrecoProduto = precoProduto;
+	public void setPrecoProduto(double newPrecoProduto) {
+		double oldPrecoProduto = precoProduto;
 		precoProduto = newPrecoProduto;
-		if (eNotificationRequired()) {
-			ENotificationImpl notification = new ENotificationImpl(this, Notification.SET, EcommercePackage.PRODUTO__PRECO_PRODUTO, oldPrecoProduto, newPrecoProduto);
-			if (msgs == null) msgs = notification; else msgs.add(notification);
-		}
-		return msgs;
-	}
-
-	/**
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 */
-	public void setPrecoProduto(ecommerce.long newPrecoProduto) {
-		if (newPrecoProduto != precoProduto) {
-			NotificationChain msgs = null;
-			if (precoProduto != null)
-				msgs = ((InternalEObject)precoProduto).eInverseRemove(this, EOPPOSITE_FEATURE_BASE - EcommercePackage.PRODUTO__PRECO_PRODUTO, null, msgs);
-			if (newPrecoProduto != null)
-				msgs = ((InternalEObject)newPrecoProduto).eInverseAdd(this, EOPPOSITE_FEATURE_BASE - EcommercePackage.PRODUTO__PRECO_PRODUTO, null, msgs);
-			msgs = basicSetPrecoProduto(newPrecoProduto, msgs);
-			if (msgs != null) msgs.dispatch();
-		}
-		else if (eNotificationRequired())
-			eNotify(new ENotificationImpl(this, Notification.SET, EcommercePackage.PRODUTO__PRECO_PRODUTO, newPrecoProduto, newPrecoProduto));
+		if (eNotificationRequired())
+			eNotify(new ENotificationImpl(this, Notification.SET, EcommercePackage.PRODUTO__PRECO_PRODUTO, oldPrecoProduto, precoProduto));
 	}
 
 	/**
@@ -306,8 +294,6 @@ public class ProdutoImpl extends MinimalEObjectImpl.Container implements Produto
 	@Override
 	public NotificationChain eInverseRemove(InternalEObject otherEnd, int featureID, NotificationChain msgs) {
 		switch (featureID) {
-			case EcommercePackage.PRODUTO__PRECO_PRODUTO:
-				return basicSetPrecoProduto(null, msgs);
 			case EcommercePackage.PRODUTO__CATEGORIA:
 				return ((InternalEList<?>)getCategoria()).basicRemove(otherEnd, msgs);
 			case EcommercePackage.PRODUTO__PEDIDO:
@@ -356,7 +342,7 @@ public class ProdutoImpl extends MinimalEObjectImpl.Container implements Produto
 				setNomeProduto((String)newValue);
 				return;
 			case EcommercePackage.PRODUTO__PRECO_PRODUTO:
-				setPrecoProduto((ecommerce.long)newValue);
+				setPrecoProduto((Double)newValue);
 				return;
 			case EcommercePackage.PRODUTO__QTDE_ESTOQUE:
 				setQtdeEstoque((Integer)newValue);
@@ -388,7 +374,7 @@ public class ProdutoImpl extends MinimalEObjectImpl.Container implements Produto
 				setNomeProduto(NOME_PRODUTO_EDEFAULT);
 				return;
 			case EcommercePackage.PRODUTO__PRECO_PRODUTO:
-				setPrecoProduto((ecommerce.long)null);
+				setPrecoProduto(PRECO_PRODUTO_EDEFAULT);
 				return;
 			case EcommercePackage.PRODUTO__QTDE_ESTOQUE:
 				setQtdeEstoque(QTDE_ESTOQUE_EDEFAULT);
@@ -416,7 +402,7 @@ public class ProdutoImpl extends MinimalEObjectImpl.Container implements Produto
 			case EcommercePackage.PRODUTO__NOME_PRODUTO:
 				return NOME_PRODUTO_EDEFAULT == null ? nomeProduto != null : !NOME_PRODUTO_EDEFAULT.equals(nomeProduto);
 			case EcommercePackage.PRODUTO__PRECO_PRODUTO:
-				return precoProduto != null;
+				return precoProduto != PRECO_PRODUTO_EDEFAULT;
 			case EcommercePackage.PRODUTO__QTDE_ESTOQUE:
 				return qtdeEstoque != QTDE_ESTOQUE_EDEFAULT;
 			case EcommercePackage.PRODUTO__CATEGORIA:
@@ -436,11 +422,13 @@ public class ProdutoImpl extends MinimalEObjectImpl.Container implements Produto
 	public String toString() {
 		if (eIsProxy()) return super.toString();
 
-		StringBuffer result = new StringBuffer(super.toString());
+		StringBuilder result = new StringBuilder(super.toString());
 		result.append(" (codProduto: ");
 		result.append(codProduto);
 		result.append(", nomeProduto: ");
 		result.append(nomeProduto);
+		result.append(", precoProduto: ");
+		result.append(precoProduto);
 		result.append(", qtdeEstoque: ");
 		result.append(qtdeEstoque);
 		result.append(')');

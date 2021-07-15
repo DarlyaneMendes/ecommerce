@@ -1,10 +1,6 @@
 /**
  */
-package com.example.ecommerce.model.ecommerce.ecommerce.impl;
-
-import ecommerce.ecommerce.Cliente;
-import ecommerce.ecommerce.EcommercePackage;
-import ecommerce.ecommerce.Pedido;
+package com.example.ecommerce.model.impl;
 
 import org.eclipse.emf.common.notify.Notification;
 import org.eclipse.emf.common.notify.NotificationChain;
@@ -15,24 +11,28 @@ import org.eclipse.emf.ecore.InternalEObject;
 import org.eclipse.emf.ecore.impl.ENotificationImpl;
 import org.eclipse.emf.ecore.impl.MinimalEObjectImpl;
 
+import com.example.ecommerce.model.Cliente;
+import com.example.ecommerce.model.EcommercePackage;
+import com.example.ecommerce.model.Pedido;
+
 /**
  * <!-- begin-user-doc -->
  * An implementation of the model object '<em><b>Cliente</b></em>'.
  * <!-- end-user-doc -->
  * <p>
  * The following features are implemented:
- * <ul>
- *   <li>{@link ecommerce.ecommerce.impl.ClienteImpl#getCpf <em>Cpf</em>}</li>
- *   <li>{@link ecommerce.ecommerce.impl.ClienteImpl#getNomeCliente <em>Nome Cliente</em>}</li>
- *   <li>{@link ecommerce.ecommerce.impl.ClienteImpl#getEndereco <em>Endereco</em>}</li>
- *   <li>{@link ecommerce.ecommerce.impl.ClienteImpl#getEstado <em>Estado</em>}</li>
- *   <li>{@link ecommerce.ecommerce.impl.ClienteImpl#getMunicipio <em>Municipio</em>}</li>
- *   <li>{@link ecommerce.ecommerce.impl.ClienteImpl#getTelefone <em>Telefone</em>}</li>
- *   <li>{@link ecommerce.ecommerce.impl.ClienteImpl#getEmail <em>Email</em>}</li>
- *   <li>{@link ecommerce.ecommerce.impl.ClienteImpl#getSenha <em>Senha</em>}</li>
- *   <li>{@link ecommerce.ecommerce.impl.ClienteImpl#getPedido <em>Pedido</em>}</li>
- * </ul>
  * </p>
+ * <ul>
+ *   <li>{@link ClienteImpl#getCpf <em>Cpf</em>}</li>
+ *   <li>{@link ClienteImpl#getNomeCliente <em>Nome Cliente</em>}</li>
+ *   <li>{@link ClienteImpl#getEndereco <em>Endereco</em>}</li>
+ *   <li>{@link ClienteImpl#getEstado <em>Estado</em>}</li>
+ *   <li>{@link ClienteImpl#getMunicipio <em>Municipio</em>}</li>
+ *   <li>{@link ClienteImpl#getTelefone <em>Telefone</em>}</li>
+ *   <li>{@link ClienteImpl#getEmail <em>Email</em>}</li>
+ *   <li>{@link ClienteImpl#getSenha <em>Senha</em>}</li>
+ *   <li>{@link ClienteImpl#getPedido <em>Pedido</em>}</li>
+ * </ul>
  *
  * @generated
  */
@@ -632,7 +632,7 @@ public class ClienteImpl extends MinimalEObjectImpl.Container implements Cliente
 	public String toString() {
 		if (eIsProxy()) return super.toString();
 
-		StringBuffer result = new StringBuffer(super.toString());
+		StringBuilder result = new StringBuilder(super.toString());
 		result.append(" (cpf: ");
 		result.append(cpf);
 		result.append(", nomeCliente: ");
