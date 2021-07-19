@@ -33,12 +33,12 @@ import com.example.ecommerce.model.Produto;
  * The following features are implemented:
  * </p>
  * <ul>
- *   <li>{@link PedidoImpl#getCodPedido <em>Cod Pedido</em>}</li>
- *   <li>{@link PedidoImpl#getDataPedido <em>Data Pedido</em>}</li>
- *   <li>{@link PedidoImpl#getCpf <em>Cpf</em>}</li>
- *   <li>{@link PedidoImpl#getProduto <em>Produto</em>}</li>
- *   <li>{@link PedidoImpl#getItemPedido <em>Item Pedido</em>}</li>
- *   <li>{@link PedidoImpl#getCliente <em>Cliente</em>}</li>
+ *   <li>{@link com.example.ecommerce.model.impl.PedidoImpl#getCodPedido <em>Cod Pedido</em>}</li>
+ *   <li>{@link com.example.ecommerce.model.impl.PedidoImpl#getDataPedido <em>Data Pedido</em>}</li>
+ *   <li>{@link com.example.ecommerce.model.impl.PedidoImpl#getCpf <em>Cpf</em>}</li>
+ *   <li>{@link com.example.ecommerce.model.impl.PedidoImpl#getProduto <em>Produto</em>}</li>
+ *   <li>{@link com.example.ecommerce.model.impl.PedidoImpl#getItemPedido <em>Item Pedido</em>}</li>
+ *   <li>{@link com.example.ecommerce.model.impl.PedidoImpl#getCliente <em>Cliente</em>}</li>
  * </ul>
  *
  * @generated

@@ -30,10 +30,10 @@ import com.example.ecommerce.model.Pedido;
  * The following features are implemented:
  * </p>
  * <ul>
- *   <li>{@link ItemPedidoImpl#getCodPedido <em>Cod Pedido</em>}</li>
- *   <li>{@link ItemPedidoImpl#getCodProduto <em>Cod Produto</em>}</li>
- *   <li>{@link ItemPedidoImpl#getQuantidade <em>Quantidade</em>}</li>
- *   <li>{@link ItemPedidoImpl#getPedido <em>Pedido</em>}</li>
+ *   <li>{@link com.example.ecommerce.model.impl.ItemPedidoImpl#getCodPedido <em>Cod Pedido</em>}</li>
+ *   <li>{@link com.example.ecommerce.model.impl.ItemPedidoImpl#getCodProduto <em>Cod Produto</em>}</li>
+ *   <li>{@link com.example.ecommerce.model.impl.ItemPedidoImpl#getQuantidade <em>Quantidade</em>}</li>
+ *   <li>{@link com.example.ecommerce.model.impl.ItemPedidoImpl#getPedido <em>Pedido</em>}</li>
  * </ul>
  *
  * @generated

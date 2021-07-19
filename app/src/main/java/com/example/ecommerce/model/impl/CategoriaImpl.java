@@ -23,9 +23,9 @@ import com.example.ecommerce.model.Produto;
  * The following features are implemented:
  * </p>
  * <ul>
- *   <li>{@link CategoriaImpl#getCodCategoria <em>Cod Categoria</em>}</li>
- *   <li>{@link CategoriaImpl#getNomeCategoria <em>Nome Categoria</em>}</li>
- *   <li>{@link CategoriaImpl#getProduto <em>Produto</em>}</li>
+ *   <li>{@link com.example.ecommerce.model.impl.CategoriaImpl#getCodCategoria <em>Cod Categoria</em>}</li>
+ *   <li>{@link com.example.ecommerce.model.impl.CategoriaImpl#getNomeCategoria <em>Nome Categoria</em>}</li>
+ *   <li>{@link com.example.ecommerce.model.impl.CategoriaImpl#getProduto <em>Produto</em>}</li>
  * </ul>
  *
  * @generated

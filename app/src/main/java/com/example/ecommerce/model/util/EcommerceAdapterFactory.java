@@ -16,7 +16,7 @@ import com.example.ecommerce.model.*;
  * The <b>Adapter Factory</b> for the model.
  * It provides an adapter <code>createXXX</code> method for each class of the model.
  * <!-- end-user-doc -->
- * @see EcommercePackage
+ * @see com.example.ecommerce.model.EcommercePackage
  * @generated
  */
 public class EcommerceAdapterFactory extends AdapterFactoryImpl {
@@ -108,13 +108,13 @@ public class EcommerceAdapterFactory extends AdapterFactoryImpl {
 
 
 	/**
-	 * Creates a new adapter for an object of class '{@link Cliente <em>Cliente</em>}'.
+	 * Creates a new adapter for an object of class '{@link com.example.ecommerce.model.Cliente <em>Cliente</em>}'.
 	 * <!-- begin-user-doc -->
 	 * This default implementation returns null so that we can easily ignore cases;
 	 * it's useful to ignore a case when inheritance will catch all the cases anyway.
 	 * <!-- end-user-doc -->
 	 * @return the new adapter.
-	 * @see Cliente
+	 * @see com.example.ecommerce.model.Cliente
 	 * @generated
 	 */
 	public Adapter createClienteAdapter() {
@@ -122,13 +122,13 @@ public class EcommerceAdapterFactory extends AdapterFactoryImpl {
 	}
 
 	/**
-	 * Creates a new adapter for an object of class '{@link Pedido <em>Pedido</em>}'.
+	 * Creates a new adapter for an object of class '{@link com.example.ecommerce.model.Pedido <em>Pedido</em>}'.
 	 * <!-- begin-user-doc -->
 	 * This default implementation returns null so that we can easily ignore cases;
 	 * it's useful to ignore a case when inheritance will catch all the cases anyway.
 	 * <!-- end-user-doc -->
 	 * @return the new adapter.
-	 * @see Pedido
+	 * @see com.example.ecommerce.model.Pedido
 	 * @generated
 	 */
 	public Adapter createPedidoAdapter() {
@@ -136,13 +136,13 @@ public class EcommerceAdapterFactory extends AdapterFactoryImpl {
 	}
 
 	/**
-	 * Creates a new adapter for an object of class '{@link Produto <em>Produto</em>}'.
+	 * Creates a new adapter for an object of class '{@link com.example.ecommerce.model.Produto <em>Produto</em>}'.
 	 * <!-- begin-user-doc -->
 	 * This default implementation returns null so that we can easily ignore cases;
 	 * it's useful to ignore a case when inheritance will catch all the cases anyway.
 	 * <!-- end-user-doc -->
 	 * @return the new adapter.
-	 * @see Produto
+	 * @see com.example.ecommerce.model.Produto
 	 * @generated
 	 */
 	public Adapter createProdutoAdapter() {
@@ -150,13 +150,13 @@ public class EcommerceAdapterFactory extends AdapterFactoryImpl {
 	}
 
 	/**
-	 * Creates a new adapter for an object of class '{@link Categoria <em>Categoria</em>}'.
+	 * Creates a new adapter for an object of class '{@link com.example.ecommerce.model.Categoria <em>Categoria</em>}'.
 	 * <!-- begin-user-doc -->
 	 * This default implementation returns null so that we can easily ignore cases;
 	 * it's useful to ignore a case when inheritance will catch all the cases anyway.
 	 * <!-- end-user-doc -->
 	 * @return the new adapter.
-	 * @see Categoria
+	 * @see com.example.ecommerce.model.Categoria
 	 * @generated
 	 */
 	public Adapter createCategoriaAdapter() {
@@ -164,13 +164,13 @@ public class EcommerceAdapterFactory extends AdapterFactoryImpl {
 	}
 
 	/**
-	 * Creates a new adapter for an object of class '{@link ItemPedido <em>Item Pedido</em>}'.
+	 * Creates a new adapter for an object of class '{@link com.example.ecommerce.model.ItemPedido <em>Item Pedido</em>}'.
 	 * <!-- begin-user-doc -->
 	 * This default implementation returns null so that we can easily ignore cases;
 	 * it's useful to ignore a case when inheritance will catch all the cases anyway.
 	 * <!-- end-user-doc -->
 	 * @return the new adapter.
-	 * @see ItemPedido
+	 * @see com.example.ecommerce.model.ItemPedido
 	 * @generated
 	 */
 	public Adapter createItemPedidoAdapter() {

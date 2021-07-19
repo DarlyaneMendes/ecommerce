@@ -11,6 +11,8 @@ import org.eclipse.emf.ecore.impl.EPackageImpl;
 
 import org.eclipse.uml2.types.TypesPackage;
 
+import org.eclipse.uml2.types.impl.TypesPackageImpl;
+
 import com.example.ecommerce.model.Categoria;
 import com.example.ecommerce.model.Cliente;
 import com.example.ecommerce.model.EcommerceFactory;
@@ -63,7 +65,7 @@ public class EcommercePackageImpl extends EPackageImpl implements EcommercePacka
 
 	/**
 	 * Creates an instance of the model <b>Package</b>, registered with
-	 * {@link Registry EPackage.Registry} by the package
+	 * {@link org.eclipse.emf.ecore.EPackage.Registry EPackage.Registry} by the package
 	 * package URI value.
 	 * <p>Note: the correct way to create the package is via the static
 	 * factory method {@link #init init()}, which also performs
@@ -71,8 +73,8 @@ public class EcommercePackageImpl extends EPackageImpl implements EcommercePacka
 	 * if one already exists.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
-	 * @see Registry
-	 * @see EcommercePackage#eNS_URI
+	 * @see org.eclipse.emf.ecore.EPackage.Registry
+	 * @see com.example.ecommerce.model.EcommercePackage#eNS_URI
 	 * @see #init()
 	 * @generated
 	 */
@@ -100,28 +102,31 @@ public class EcommercePackageImpl extends EPackageImpl implements EcommercePacka
 	 * @generated
 	 */
 	public static EcommercePackage init() {
-		if (isInited) return (EcommercePackage) Registry.INSTANCE.getEPackage(EcommercePackage.eNS_URI);
+		if (isInited) return (EcommercePackage)EPackage.Registry.INSTANCE.getEPackage(EcommercePackage.eNS_URI);
 
 		// Obtain or create and register package
-		Object registeredEcommercePackage = Registry.INSTANCE.get(eNS_URI);
+		Object registeredEcommercePackage = EPackage.Registry.INSTANCE.get(eNS_URI);
 		EcommercePackageImpl theEcommercePackage = registeredEcommercePackage instanceof EcommercePackageImpl ? (EcommercePackageImpl)registeredEcommercePackage : new EcommercePackageImpl();
 
 		isInited = true;
 
-		// Initialize simple dependencies
-		TypesPackage.eINSTANCE.eClass();
+		// Obtain or create and register interdependencies
+		Object registeredPackage = EPackage.Registry.INSTANCE.getEPackage(TypesPackage.eNS_URI);
+		TypesPackageImpl theTypesPackage = (TypesPackageImpl)(registeredPackage instanceof TypesPackageImpl ? registeredPackage : TypesPackage.eINSTANCE);
 
 		// Create package meta-data objects
 		theEcommercePackage.createPackageContents();
+		theTypesPackage.createPackageContents();
 
 		// Initialize created meta-data
 		theEcommercePackage.initializePackageContents();
+		theTypesPackage.initializePackageContents();
 
 		// Mark meta-data to indicate it can't be changed
 		theEcommercePackage.freeze();
 
 		// Update the registry and return the package
-		Registry.INSTANCE.put(EcommercePackage.eNS_URI, theEcommercePackage);
+		EPackage.Registry.INSTANCE.put(EcommercePackage.eNS_URI, theEcommercePackage);
 		return theEcommercePackage;
 	}
 
@@ -513,7 +518,7 @@ public class EcommercePackageImpl extends EPackageImpl implements EcommercePacka
 		setNsURI(eNS_URI);
 
 		// Obtain other dependent packages
-		TypesPackage theTypesPackage = (TypesPackage) Registry.INSTANCE.getEPackage(TypesPackage.eNS_URI);
+		TypesPackage theTypesPackage = (TypesPackage)EPackage.Registry.INSTANCE.getEPackage(TypesPackage.eNS_URI);
 
 		// Create type parameters
 

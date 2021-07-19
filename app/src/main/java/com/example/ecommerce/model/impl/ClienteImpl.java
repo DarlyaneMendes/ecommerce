@@ -23,15 +23,15 @@ import com.example.ecommerce.model.Pedido;
  * The following features are implemented:
  * </p>
  * <ul>
- *   <li>{@link ClienteImpl#getCpf <em>Cpf</em>}</li>
- *   <li>{@link ClienteImpl#getNomeCliente <em>Nome Cliente</em>}</li>
- *   <li>{@link ClienteImpl#getEndereco <em>Endereco</em>}</li>
- *   <li>{@link ClienteImpl#getEstado <em>Estado</em>}</li>
- *   <li>{@link ClienteImpl#getMunicipio <em>Municipio</em>}</li>
- *   <li>{@link ClienteImpl#getTelefone <em>Telefone</em>}</li>
- *   <li>{@link ClienteImpl#getEmail <em>Email</em>}</li>
- *   <li>{@link ClienteImpl#getSenha <em>Senha</em>}</li>
- *   <li>{@link ClienteImpl#getPedido <em>Pedido</em>}</li>
+ *   <li>{@link com.example.ecommerce.model.impl.ClienteImpl#getCpf <em>Cpf</em>}</li>
+ *   <li>{@link com.example.ecommerce.model.impl.ClienteImpl#getNomeCliente <em>Nome Cliente</em>}</li>
+ *   <li>{@link com.example.ecommerce.model.impl.ClienteImpl#getEndereco <em>Endereco</em>}</li>
+ *   <li>{@link com.example.ecommerce.model.impl.ClienteImpl#getEstado <em>Estado</em>}</li>
+ *   <li>{@link com.example.ecommerce.model.impl.ClienteImpl#getMunicipio <em>Municipio</em>}</li>
+ *   <li>{@link com.example.ecommerce.model.impl.ClienteImpl#getTelefone <em>Telefone</em>}</li>
+ *   <li>{@link com.example.ecommerce.model.impl.ClienteImpl#getEmail <em>Email</em>}</li>
+ *   <li>{@link com.example.ecommerce.model.impl.ClienteImpl#getSenha <em>Senha</em>}</li>
+ *   <li>{@link com.example.ecommerce.model.impl.ClienteImpl#getPedido <em>Pedido</em>}</li>
  * </ul>
  *
  * @generated

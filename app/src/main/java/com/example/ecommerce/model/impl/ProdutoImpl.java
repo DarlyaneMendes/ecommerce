@@ -31,12 +31,12 @@ import com.example.ecommerce.model.Produto;
  * The following features are implemented:
  * </p>
  * <ul>
- *   <li>{@link ProdutoImpl#getCodProduto <em>Cod Produto</em>}</li>
- *   <li>{@link ProdutoImpl#getNomeProduto <em>Nome Produto</em>}</li>
- *   <li>{@link ProdutoImpl#getPrecoProduto <em>Preco Produto</em>}</li>
- *   <li>{@link ProdutoImpl#getQtdeEstoque <em>Qtde Estoque</em>}</li>
- *   <li>{@link ProdutoImpl#getCategoria <em>Categoria</em>}</li>
- *   <li>{@link ProdutoImpl#getPedido <em>Pedido</em>}</li>
+ *   <li>{@link com.example.ecommerce.model.impl.ProdutoImpl#getCodProduto <em>Cod Produto</em>}</li>
+ *   <li>{@link com.example.ecommerce.model.impl.ProdutoImpl#getNomeProduto <em>Nome Produto</em>}</li>
+ *   <li>{@link com.example.ecommerce.model.impl.ProdutoImpl#getPrecoProduto <em>Preco Produto</em>}</li>
+ *   <li>{@link com.example.ecommerce.model.impl.ProdutoImpl#getQtdeEstoque <em>Qtde Estoque</em>}</li>
+ *   <li>{@link com.example.ecommerce.model.impl.ProdutoImpl#getCategoria <em>Categoria</em>}</li>
+ *   <li>{@link com.example.ecommerce.model.impl.ProdutoImpl#getPedido <em>Pedido</em>}</li>
  * </ul>
  *
  * @generated

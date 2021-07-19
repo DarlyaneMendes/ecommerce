@@ -19,7 +19,7 @@ import com.example.ecommerce.model.*;
  * until a non-null result is returned,
  * which is the result of the switch.
  * <!-- end-user-doc -->
- * @see EcommercePackage
+ * @see com.example.ecommerce.model.EcommercePackage
  * @generated
  */
 public class EcommerceSwitch<T> extends Switch<T> {
@@ -108,7 +108,7 @@ public class EcommerceSwitch<T> extends Switch<T> {
 	 * <!-- end-user-doc -->
 	 * @param object the target of the switch.
 	 * @return the result of interpreting the object as an instance of '<em>Cliente</em>'.
-	 * @see #doSwitch(EObject) doSwitch(EObject)
+	 * @see #doSwitch(org.eclipse.emf.ecore.EObject) doSwitch(EObject)
 	 * @generated
 	 */
 	public T caseCliente(Cliente object) {
@@ -123,7 +123,7 @@ public class EcommerceSwitch<T> extends Switch<T> {
 	 * <!-- end-user-doc -->
 	 * @param object the target of the switch.
 	 * @return the result of interpreting the object as an instance of '<em>Pedido</em>'.
-	 * @see #doSwitch(EObject) doSwitch(EObject)
+	 * @see #doSwitch(org.eclipse.emf.ecore.EObject) doSwitch(EObject)
 	 * @generated
 	 */
 	public T casePedido(Pedido object) {
@@ -138,7 +138,7 @@ public class EcommerceSwitch<T> extends Switch<T> {
 	 * <!-- end-user-doc -->
 	 * @param object the target of the switch.
 	 * @return the result of interpreting the object as an instance of '<em>Produto</em>'.
-	 * @see #doSwitch(EObject) doSwitch(EObject)
+	 * @see #doSwitch(org.eclipse.emf.ecore.EObject) doSwitch(EObject)
 	 * @generated
 	 */
 	public T caseProduto(Produto object) {
@@ -153,7 +153,7 @@ public class EcommerceSwitch<T> extends Switch<T> {
 	 * <!-- end-user-doc -->
 	 * @param object the target of the switch.
 	 * @return the result of interpreting the object as an instance of '<em>Categoria</em>'.
-	 * @see #doSwitch(EObject) doSwitch(EObject)
+	 * @see #doSwitch(org.eclipse.emf.ecore.EObject) doSwitch(EObject)
 	 * @generated
 	 */
 	public T caseCategoria(Categoria object) {
@@ -168,7 +168,7 @@ public class EcommerceSwitch<T> extends Switch<T> {
 	 * <!-- end-user-doc -->
 	 * @param object the target of the switch.
 	 * @return the result of interpreting the object as an instance of '<em>Item Pedido</em>'.
-	 * @see #doSwitch(EObject) doSwitch(EObject)
+	 * @see #doSwitch(org.eclipse.emf.ecore.EObject) doSwitch(EObject)
 	 * @generated
 	 */
 	public T caseItemPedido(ItemPedido object) {
@@ -183,7 +183,7 @@ public class EcommerceSwitch<T> extends Switch<T> {
 	 * <!-- end-user-doc -->
 	 * @param object the target of the switch.
 	 * @return the result of interpreting the object as an instance of '<em>EObject</em>'.
-	 * @see #doSwitch(EObject)
+	 * @see #doSwitch(org.eclipse.emf.ecore.EObject)
 	 * @generated
 	 */
 	@Override

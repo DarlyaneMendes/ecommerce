@@ -19,7 +19,7 @@ import org.eclipse.emf.ecore.EReference;
  *   <li>and each data type</li>
  * </ul>
  * <!-- end-user-doc -->
- * @see EcommerceFactory
+ * @see com.example.ecommerce.model.EcommerceFactory
  * @model kind="package"
  * @generated
  */
@@ -450,358 +450,358 @@ public interface EcommercePackage extends EPackage {
 
 
 	/**
-	 * Returns the meta object for class '{@link Cliente <em>Cliente</em>}'.
+	 * Returns the meta object for class '{@link com.example.ecommerce.model.Cliente <em>Cliente</em>}'.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @return the meta object for class '<em>Cliente</em>'.
-	 * @see Cliente
+	 * @see com.example.ecommerce.model.Cliente
 	 * @generated
 	 */
 	EClass getCliente();
 
 	/**
-	 * Returns the meta object for the attribute '{@link Cliente#getCpf <em>Cpf</em>}'.
+	 * Returns the meta object for the attribute '{@link com.example.ecommerce.model.Cliente#getCpf <em>Cpf</em>}'.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @return the meta object for the attribute '<em>Cpf</em>'.
-	 * @see Cliente#getCpf()
+	 * @see com.example.ecommerce.model.Cliente#getCpf()
 	 * @see #getCliente()
 	 * @generated
 	 */
 	EAttribute getCliente_Cpf();
 
 	/**
-	 * Returns the meta object for the attribute '{@link Cliente#getNomeCliente <em>Nome Cliente</em>}'.
+	 * Returns the meta object for the attribute '{@link com.example.ecommerce.model.Cliente#getNomeCliente <em>Nome Cliente</em>}'.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @return the meta object for the attribute '<em>Nome Cliente</em>'.
-	 * @see Cliente#getNomeCliente()
+	 * @see com.example.ecommerce.model.Cliente#getNomeCliente()
 	 * @see #getCliente()
 	 * @generated
 	 */
 	EAttribute getCliente_NomeCliente();
 
 	/**
-	 * Returns the meta object for the attribute '{@link Cliente#getEndereco <em>Endereco</em>}'.
+	 * Returns the meta object for the attribute '{@link com.example.ecommerce.model.Cliente#getEndereco <em>Endereco</em>}'.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @return the meta object for the attribute '<em>Endereco</em>'.
-	 * @see Cliente#getEndereco()
+	 * @see com.example.ecommerce.model.Cliente#getEndereco()
 	 * @see #getCliente()
 	 * @generated
 	 */
 	EAttribute getCliente_Endereco();
 
 	/**
-	 * Returns the meta object for the attribute '{@link Cliente#getEstado <em>Estado</em>}'.
+	 * Returns the meta object for the attribute '{@link com.example.ecommerce.model.Cliente#getEstado <em>Estado</em>}'.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @return the meta object for the attribute '<em>Estado</em>'.
-	 * @see Cliente#getEstado()
+	 * @see com.example.ecommerce.model.Cliente#getEstado()
 	 * @see #getCliente()
 	 * @generated
 	 */
 	EAttribute getCliente_Estado();
 
 	/**
-	 * Returns the meta object for the attribute '{@link Cliente#getMunicipio <em>Municipio</em>}'.
+	 * Returns the meta object for the attribute '{@link com.example.ecommerce.model.Cliente#getMunicipio <em>Municipio</em>}'.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @return the meta object for the attribute '<em>Municipio</em>'.
-	 * @see Cliente#getMunicipio()
+	 * @see com.example.ecommerce.model.Cliente#getMunicipio()
 	 * @see #getCliente()
 	 * @generated
 	 */
 	EAttribute getCliente_Municipio();
 
 	/**
-	 * Returns the meta object for the attribute '{@link Cliente#getTelefone <em>Telefone</em>}'.
+	 * Returns the meta object for the attribute '{@link com.example.ecommerce.model.Cliente#getTelefone <em>Telefone</em>}'.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @return the meta object for the attribute '<em>Telefone</em>'.
-	 * @see Cliente#getTelefone()
+	 * @see com.example.ecommerce.model.Cliente#getTelefone()
 	 * @see #getCliente()
 	 * @generated
 	 */
 	EAttribute getCliente_Telefone();
 
 	/**
-	 * Returns the meta object for the attribute '{@link Cliente#getEmail <em>Email</em>}'.
+	 * Returns the meta object for the attribute '{@link com.example.ecommerce.model.Cliente#getEmail <em>Email</em>}'.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @return the meta object for the attribute '<em>Email</em>'.
-	 * @see Cliente#getEmail()
+	 * @see com.example.ecommerce.model.Cliente#getEmail()
 	 * @see #getCliente()
 	 * @generated
 	 */
 	EAttribute getCliente_Email();
 
 	/**
-	 * Returns the meta object for the attribute '{@link Cliente#getSenha <em>Senha</em>}'.
+	 * Returns the meta object for the attribute '{@link com.example.ecommerce.model.Cliente#getSenha <em>Senha</em>}'.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @return the meta object for the attribute '<em>Senha</em>'.
-	 * @see Cliente#getSenha()
+	 * @see com.example.ecommerce.model.Cliente#getSenha()
 	 * @see #getCliente()
 	 * @generated
 	 */
 	EAttribute getCliente_Senha();
 
 	/**
-	 * Returns the meta object for the reference '{@link Cliente#getPedido <em>Pedido</em>}'.
+	 * Returns the meta object for the reference '{@link com.example.ecommerce.model.Cliente#getPedido <em>Pedido</em>}'.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @return the meta object for the reference '<em>Pedido</em>'.
-	 * @see Cliente#getPedido()
+	 * @see com.example.ecommerce.model.Cliente#getPedido()
 	 * @see #getCliente()
 	 * @generated
 	 */
 	EReference getCliente_Pedido();
 
 	/**
-	 * Returns the meta object for class '{@link Pedido <em>Pedido</em>}'.
+	 * Returns the meta object for class '{@link com.example.ecommerce.model.Pedido <em>Pedido</em>}'.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @return the meta object for class '<em>Pedido</em>'.
-	 * @see Pedido
+	 * @see com.example.ecommerce.model.Pedido
 	 * @generated
 	 */
 	EClass getPedido();
 
 	/**
-	 * Returns the meta object for the attribute '{@link Pedido#getCodPedido <em>Cod Pedido</em>}'.
+	 * Returns the meta object for the attribute '{@link com.example.ecommerce.model.Pedido#getCodPedido <em>Cod Pedido</em>}'.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @return the meta object for the attribute '<em>Cod Pedido</em>'.
-	 * @see Pedido#getCodPedido()
+	 * @see com.example.ecommerce.model.Pedido#getCodPedido()
 	 * @see #getPedido()
 	 * @generated
 	 */
 	EAttribute getPedido_CodPedido();
 
 	/**
-	 * Returns the meta object for the attribute '{@link Pedido#getDataPedido <em>Data Pedido</em>}'.
+	 * Returns the meta object for the attribute '{@link com.example.ecommerce.model.Pedido#getDataPedido <em>Data Pedido</em>}'.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @return the meta object for the attribute '<em>Data Pedido</em>'.
-	 * @see Pedido#getDataPedido()
+	 * @see com.example.ecommerce.model.Pedido#getDataPedido()
 	 * @see #getPedido()
 	 * @generated
 	 */
 	EAttribute getPedido_DataPedido();
 
 	/**
-	 * Returns the meta object for the attribute '{@link Pedido#getCpf <em>Cpf</em>}'.
+	 * Returns the meta object for the attribute '{@link com.example.ecommerce.model.Pedido#getCpf <em>Cpf</em>}'.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @return the meta object for the attribute '<em>Cpf</em>'.
-	 * @see Pedido#getCpf()
+	 * @see com.example.ecommerce.model.Pedido#getCpf()
 	 * @see #getPedido()
 	 * @generated
 	 */
 	EAttribute getPedido_Cpf();
 
 	/**
-	 * Returns the meta object for the reference list '{@link Pedido#getProduto <em>Produto</em>}'.
+	 * Returns the meta object for the reference list '{@link com.example.ecommerce.model.Pedido#getProduto <em>Produto</em>}'.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @return the meta object for the reference list '<em>Produto</em>'.
-	 * @see Pedido#getProduto()
+	 * @see com.example.ecommerce.model.Pedido#getProduto()
 	 * @see #getPedido()
 	 * @generated
 	 */
 	EReference getPedido_Produto();
 
 	/**
-	 * Returns the meta object for the reference list '{@link Pedido#getItemPedido <em>Item Pedido</em>}'.
+	 * Returns the meta object for the reference list '{@link com.example.ecommerce.model.Pedido#getItemPedido <em>Item Pedido</em>}'.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @return the meta object for the reference list '<em>Item Pedido</em>'.
-	 * @see Pedido#getItemPedido()
+	 * @see com.example.ecommerce.model.Pedido#getItemPedido()
 	 * @see #getPedido()
 	 * @generated
 	 */
 	EReference getPedido_ItemPedido();
 
 	/**
-	 * Returns the meta object for the reference list '{@link Pedido#getCliente <em>Cliente</em>}'.
+	 * Returns the meta object for the reference list '{@link com.example.ecommerce.model.Pedido#getCliente <em>Cliente</em>}'.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @return the meta object for the reference list '<em>Cliente</em>'.
-	 * @see Pedido#getCliente()
+	 * @see com.example.ecommerce.model.Pedido#getCliente()
 	 * @see #getPedido()
 	 * @generated
 	 */
 	EReference getPedido_Cliente();
 
 	/**
-	 * Returns the meta object for class '{@link Produto <em>Produto</em>}'.
+	 * Returns the meta object for class '{@link com.example.ecommerce.model.Produto <em>Produto</em>}'.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @return the meta object for class '<em>Produto</em>'.
-	 * @see Produto
+	 * @see com.example.ecommerce.model.Produto
 	 * @generated
 	 */
 	EClass getProduto();
 
 	/**
-	 * Returns the meta object for the attribute '{@link Produto#getCodProduto <em>Cod Produto</em>}'.
+	 * Returns the meta object for the attribute '{@link com.example.ecommerce.model.Produto#getCodProduto <em>Cod Produto</em>}'.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @return the meta object for the attribute '<em>Cod Produto</em>'.
-	 * @see Produto#getCodProduto()
+	 * @see com.example.ecommerce.model.Produto#getCodProduto()
 	 * @see #getProduto()
 	 * @generated
 	 */
 	EAttribute getProduto_CodProduto();
 
 	/**
-	 * Returns the meta object for the attribute '{@link Produto#getNomeProduto <em>Nome Produto</em>}'.
+	 * Returns the meta object for the attribute '{@link com.example.ecommerce.model.Produto#getNomeProduto <em>Nome Produto</em>}'.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @return the meta object for the attribute '<em>Nome Produto</em>'.
-	 * @see Produto#getNomeProduto()
+	 * @see com.example.ecommerce.model.Produto#getNomeProduto()
 	 * @see #getProduto()
 	 * @generated
 	 */
 	EAttribute getProduto_NomeProduto();
 
 	/**
-	 * Returns the meta object for the attribute '{@link Produto#getPrecoProduto <em>Preco Produto</em>}'.
+	 * Returns the meta object for the attribute '{@link com.example.ecommerce.model.Produto#getPrecoProduto <em>Preco Produto</em>}'.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @return the meta object for the attribute '<em>Preco Produto</em>'.
-	 * @see Produto#getPrecoProduto()
+	 * @see com.example.ecommerce.model.Produto#getPrecoProduto()
 	 * @see #getProduto()
 	 * @generated
 	 */
 	EAttribute getProduto_PrecoProduto();
 
 	/**
-	 * Returns the meta object for the attribute '{@link Produto#getQtdeEstoque <em>Qtde Estoque</em>}'.
+	 * Returns the meta object for the attribute '{@link com.example.ecommerce.model.Produto#getQtdeEstoque <em>Qtde Estoque</em>}'.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @return the meta object for the attribute '<em>Qtde Estoque</em>'.
-	 * @see Produto#getQtdeEstoque()
+	 * @see com.example.ecommerce.model.Produto#getQtdeEstoque()
 	 * @see #getProduto()
 	 * @generated
 	 */
 	EAttribute getProduto_QtdeEstoque();
 
 	/**
-	 * Returns the meta object for the reference list '{@link Produto#getCategoria <em>Categoria</em>}'.
+	 * Returns the meta object for the reference list '{@link com.example.ecommerce.model.Produto#getCategoria <em>Categoria</em>}'.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @return the meta object for the reference list '<em>Categoria</em>'.
-	 * @see Produto#getCategoria()
+	 * @see com.example.ecommerce.model.Produto#getCategoria()
 	 * @see #getProduto()
 	 * @generated
 	 */
 	EReference getProduto_Categoria();
 
 	/**
-	 * Returns the meta object for the reference list '{@link Produto#getPedido <em>Pedido</em>}'.
+	 * Returns the meta object for the reference list '{@link com.example.ecommerce.model.Produto#getPedido <em>Pedido</em>}'.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @return the meta object for the reference list '<em>Pedido</em>'.
-	 * @see Produto#getPedido()
+	 * @see com.example.ecommerce.model.Produto#getPedido()
 	 * @see #getProduto()
 	 * @generated
 	 */
 	EReference getProduto_Pedido();
 
 	/**
-	 * Returns the meta object for class '{@link Categoria <em>Categoria</em>}'.
+	 * Returns the meta object for class '{@link com.example.ecommerce.model.Categoria <em>Categoria</em>}'.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @return the meta object for class '<em>Categoria</em>'.
-	 * @see Categoria
+	 * @see com.example.ecommerce.model.Categoria
 	 * @generated
 	 */
 	EClass getCategoria();
 
 	/**
-	 * Returns the meta object for the attribute '{@link Categoria#getCodCategoria <em>Cod Categoria</em>}'.
+	 * Returns the meta object for the attribute '{@link com.example.ecommerce.model.Categoria#getCodCategoria <em>Cod Categoria</em>}'.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @return the meta object for the attribute '<em>Cod Categoria</em>'.
-	 * @see Categoria#getCodCategoria()
+	 * @see com.example.ecommerce.model.Categoria#getCodCategoria()
 	 * @see #getCategoria()
 	 * @generated
 	 */
 	EAttribute getCategoria_CodCategoria();
 
 	/**
-	 * Returns the meta object for the attribute '{@link Categoria#getNomeCategoria <em>Nome Categoria</em>}'.
+	 * Returns the meta object for the attribute '{@link com.example.ecommerce.model.Categoria#getNomeCategoria <em>Nome Categoria</em>}'.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @return the meta object for the attribute '<em>Nome Categoria</em>'.
-	 * @see Categoria#getNomeCategoria()
+	 * @see com.example.ecommerce.model.Categoria#getNomeCategoria()
 	 * @see #getCategoria()
 	 * @generated
 	 */
 	EAttribute getCategoria_NomeCategoria();
 
 	/**
-	 * Returns the meta object for the reference '{@link Categoria#getProduto <em>Produto</em>}'.
+	 * Returns the meta object for the reference '{@link com.example.ecommerce.model.Categoria#getProduto <em>Produto</em>}'.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @return the meta object for the reference '<em>Produto</em>'.
-	 * @see Categoria#getProduto()
+	 * @see com.example.ecommerce.model.Categoria#getProduto()
 	 * @see #getCategoria()
 	 * @generated
 	 */
 	EReference getCategoria_Produto();
 
 	/**
-	 * Returns the meta object for class '{@link ItemPedido <em>Item Pedido</em>}'.
+	 * Returns the meta object for class '{@link com.example.ecommerce.model.ItemPedido <em>Item Pedido</em>}'.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @return the meta object for class '<em>Item Pedido</em>'.
-	 * @see ItemPedido
+	 * @see com.example.ecommerce.model.ItemPedido
 	 * @generated
 	 */
 	EClass getItemPedido();
 
 	/**
-	 * Returns the meta object for the attribute '{@link ItemPedido#getCodPedido <em>Cod Pedido</em>}'.
+	 * Returns the meta object for the attribute '{@link com.example.ecommerce.model.ItemPedido#getCodPedido <em>Cod Pedido</em>}'.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @return the meta object for the attribute '<em>Cod Pedido</em>'.
-	 * @see ItemPedido#getCodPedido()
+	 * @see com.example.ecommerce.model.ItemPedido#getCodPedido()
 	 * @see #getItemPedido()
 	 * @generated
 	 */
 	EAttribute getItemPedido_CodPedido();
 
 	/**
-	 * Returns the meta object for the attribute '{@link ItemPedido#getCodProduto <em>Cod Produto</em>}'.
+	 * Returns the meta object for the attribute '{@link com.example.ecommerce.model.ItemPedido#getCodProduto <em>Cod Produto</em>}'.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @return the meta object for the attribute '<em>Cod Produto</em>'.
-	 * @see ItemPedido#getCodProduto()
+	 * @see com.example.ecommerce.model.ItemPedido#getCodProduto()
 	 * @see #getItemPedido()
 	 * @generated
 	 */
 	EAttribute getItemPedido_CodProduto();
 
 	/**
-	 * Returns the meta object for the attribute '{@link ItemPedido#getQuantidade <em>Quantidade</em>}'.
+	 * Returns the meta object for the attribute '{@link com.example.ecommerce.model.ItemPedido#getQuantidade <em>Quantidade</em>}'.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @return the meta object for the attribute '<em>Quantidade</em>'.
-	 * @see ItemPedido#getQuantidade()
+	 * @see com.example.ecommerce.model.ItemPedido#getQuantidade()
 	 * @see #getItemPedido()
 	 * @generated
 	 */
 	EAttribute getItemPedido_Quantidade();
 
 	/**
-	 * Returns the meta object for the reference list '{@link ItemPedido#getPedido <em>Pedido</em>}'.
+	 * Returns the meta object for the reference list '{@link com.example.ecommerce.model.ItemPedido#getPedido <em>Pedido</em>}'.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @return the meta object for the reference list '<em>Pedido</em>'.
-	 * @see ItemPedido#getPedido()
+	 * @see com.example.ecommerce.model.ItemPedido#getPedido()
 	 * @see #getItemPedido()
 	 * @generated
 	 */
