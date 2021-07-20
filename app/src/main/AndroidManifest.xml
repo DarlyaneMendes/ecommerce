@@ -9,13 +9,24 @@
         android:roundIcon="@mipmap/ic_launcher_round"
         android:supportsRtl="true"
         android:theme="@style/Theme.Ecommerce">
-        <activity android:name=".view.CategoriaActivity">
+        <activity android:name=".view.LoginActivity">
             <intent-filter>
                 <action android:name="android.intent.action.MAIN" />
 
                 <category android:name="android.intent.category.LAUNCHER" />
             </intent-filter>
         </activity>
+        <activity android:name=".view.ClienteActivity"></activity>
+        <activity android:name=".view.ProdutoActivity"></activity>
+        <activity android:name=".view.PedidoActivity"></activity>
+        <activity android:name=".view.CategoriaActivity"></activity>
+        <activity android:name=".view.RelatorioActivity"></activity>
+        <activity android:name=".view.HomeActivity"></activity>
+        <activity android:name=".view.ListaClienteActivity"></activity>
+        <activity android:name=".view.ListaProdutoActivity"></activity>
+        <activity android:name=".view.ListaPedidoActivity"></activity>
+        <activity android:name=".view.ListaCategoriaActivity"></activity>
+        <activity android:name=".view.ListaRelatorioActivity"></activity>
     </application>
 
 </manifest>

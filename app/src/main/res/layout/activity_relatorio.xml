@@ -1,0 +1,117 @@
+<?xml version="1.0" encoding="utf-8"?>
+<android.support.constraint.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/container"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:paddingLeft="@dimen/activity_horizontal_margin"
+    android:paddingTop="@dimen/activity_vertical_margin"
+    android:paddingRight="@dimen/activity_horizontal_margin"
+    android:paddingBottom="@dimen/activity_vertical_margin">
+
+    <Button
+        android:id="@+id/buttonGerar"
+        android:layout_width="403dp"
+        android:layout_height="50dp"
+        android:layout_marginBottom="48dp"
+        android:layout_weight="1"
+        android:text="Gerar"
+        app:layout_constraintBottom_toTopOf="@+id/imageButtonSair"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent" />
+
+    <TextView
+        android:id="@+id/textViewDataFinal"
+        android:layout_width="103dp"
+        android:layout_height="31dp"
+        android:layout_marginStart="5dp"
+        android:layout_marginLeft="5dp"
+        android:layout_marginTop="16dp"
+        android:layout_weight="1"
+        android:text="Data Final:"
+        android:textSize="20sp"
+        android:textStyle="bold"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/textViewDataInicial" />
+
+    <EditText
+        android:id="@+id/editTextDataInicial"
+        android:layout_width="266dp"
+        android:layout_height="44dp"
+        android:layout_marginTop="30dp"
+        android:layout_weight="1"
+        android:ems="10"
+        android:inputType="date"
+        app:layout_constraintStart_toEndOf="@+id/textViewDataInicial"
+        app:layout_constraintTop_toBottomOf="@+id/textViewGerarRelatorio" />
+
+    <TextView
+        android:id="@+id/textViewDataInicial"
+        android:layout_width="109dp"
+        android:layout_height="29dp"
+        android:layout_marginStart="5dp"
+        android:layout_marginLeft="5dp"
+        android:layout_marginTop="40dp"
+        android:layout_weight="1"
+        android:text="Data Inicial:"
+        android:textSize="20sp"
+        android:textStyle="bold"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/textViewGerarRelatorio" />
+
+    <TextView
+        android:id="@+id/textViewGerarRelatorio"
+        android:layout_width="280dp"
+        android:layout_height="34dp"
+        android:layout_marginStart="16dp"
+        android:layout_marginLeft="16dp"
+        android:layout_marginTop="16dp"
+        android:text="Relatório"
+        android:textColor="@color/purple_500"
+        android:textSize="26sp"
+        android:textStyle="bold"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <ImageButton
+        android:id="@+id/imageButtonSair"
+        android:layout_width="107dp"
+        android:layout_height="68dp"
+        android:layout_weight="1"
+        android:background="@color/white"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:srcCompat="@drawable/icons8_sair_48" />
+
+    <ImageButton
+        android:id="@+id/imageButtonPerfil"
+        android:layout_width="126dp"
+        android:layout_height="64dp"
+        android:layout_weight="1"
+        android:background="@color/white"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toStartOf="@+id/imageButtonSair"
+        app:srcCompat="@drawable/icons8_usu_rio_de_g_nero_neutro_48" />
+
+    <ImageButton
+        android:id="@+id/imageButtonHome"
+        android:layout_width="130dp"
+        android:layout_height="64dp"
+        android:layout_weight="1"
+        android:background="@color/white"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:srcCompat="@drawable/icons8_card_pio_48" />
+
+    <EditText
+        android:id="@+id/editTextDataFinal"
+        android:layout_width="278dp"
+        android:layout_height="47dp"
+        android:layout_weight="1"
+        android:ems="10"
+        android:inputType="date"
+        app:layout_constraintStart_toEndOf="@+id/textViewDataFinal"
+        app:layout_constraintTop_toBottomOf="@+id/editTextDataInicial" />
+
+</android.support.constraint.ConstraintLayout>

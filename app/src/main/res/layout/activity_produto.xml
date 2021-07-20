@@ -1,0 +1,166 @@
+<?xml version="1.0" encoding="utf-8"?>
+<android.support.constraint.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/container"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:paddingLeft="@dimen/activity_horizontal_margin"
+    android:paddingTop="@dimen/activity_vertical_margin"
+    android:paddingRight="@dimen/activity_horizontal_margin"
+    android:paddingBottom="@dimen/activity_vertical_margin">
+
+    <EditText
+        android:id="@+id/editTextQuantidadeDisponivel"
+        android:layout_width="214dp"
+        android:layout_height="45dp"
+        android:ems="10"
+        android:inputType="textPersonName"
+        app:layout_constraintStart_toEndOf="@+id/textViewQuantidadeDisponivel"
+        app:layout_constraintTop_toBottomOf="@+id/editTextCategoriaProduto" />
+
+    <TextView
+        android:id="@+id/textViewQuantidadeDisponivel"
+        android:layout_width="172dp"
+        android:layout_height="33dp"
+        android:layout_marginStart="5dp"
+        android:layout_marginLeft="5dp"
+        android:layout_marginTop="16dp"
+        android:text="Quantidade Disponível:"
+        android:textSize="16sp"
+        android:textStyle="bold"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/textViewCategoriaProduto" />
+
+    <EditText
+        android:id="@+id/editTextCategoriaProduto"
+        android:layout_width="298dp"
+        android:layout_height="47dp"
+        android:ems="10"
+        android:inputType="textPersonName"
+        app:layout_constraintStart_toEndOf="@+id/textViewCategoriaProduto"
+        app:layout_constraintTop_toBottomOf="@+id/editTextDescricaoProduto" />
+
+    <TextView
+        android:id="@+id/textViewCategoriaProduto"
+        android:layout_width="86dp"
+        android:layout_height="31dp"
+        android:layout_marginStart="5dp"
+        android:layout_marginLeft="5dp"
+        android:layout_marginTop="16dp"
+        android:text="Categoria:"
+        android:textSize="16sp"
+        android:textStyle="bold"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/textViewDescricaoProduto" />
+
+    <EditText
+        android:id="@+id/editTextDescricaoProduto"
+        android:layout_width="308dp"
+        android:layout_height="51dp"
+        android:ems="10"
+        android:inputType="textPersonName"
+        app:layout_constraintStart_toEndOf="@+id/textViewDescricaoProduto"
+        app:layout_constraintTop_toBottomOf="@+id/editTextCodigoProduto" />
+
+    <TextView
+        android:id="@+id/textViewDescricaoProduto"
+        android:layout_width="82dp"
+        android:layout_height="29dp"
+        android:layout_marginStart="5dp"
+        android:layout_marginLeft="5dp"
+        android:layout_marginTop="16dp"
+        android:text="Descrição:"
+        android:textSize="16sp"
+        android:textStyle="bold"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/textViewCodigoProduto" />
+
+    <EditText
+        android:id="@+id/editTextCodigoProduto"
+        android:layout_width="325dp"
+        android:layout_height="43dp"
+        android:layout_marginTop="30dp"
+        android:ems="10"
+        android:inputType="textPersonName"
+        app:layout_constraintStart_toEndOf="@+id/textViewCodigoProduto"
+        app:layout_constraintTop_toBottomOf="@+id/textViewCadastroProduto" />
+
+    <TextView
+        android:id="@+id/textViewCodigoProduto"
+        android:layout_width="62dp"
+        android:layout_height="37dp"
+        android:layout_marginStart="5dp"
+        android:layout_marginLeft="5dp"
+        android:layout_marginTop="40dp"
+        android:text="Código:"
+        android:textSize="16sp"
+        android:textStyle="bold"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/textViewCadastroProduto" />
+
+    <TextView
+        android:id="@+id/textViewCadastroProduto"
+        android:layout_width="222dp"
+        android:layout_height="37dp"
+        android:layout_marginStart="16dp"
+        android:layout_marginLeft="16dp"
+        android:layout_marginTop="16dp"
+        android:baselineAligned="false"
+        android:text="Cadastro de Produto"
+        android:textColor="@color/purple_500"
+        android:textSize="24sp"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <Button
+        android:id="@+id/buttonCancelar"
+        android:layout_width="381dp"
+        android:layout_height="57dp"
+        android:layout_marginBottom="48dp"
+        android:text="Cancelar"
+        app:layout_constraintBottom_toTopOf="@+id/imageButtonPerfil"
+        tools:ignore="MissingConstraints"
+        tools:layout_editor_absoluteX="-8dp" />
+
+    <Button
+        android:id="@+id/buttonSalvar"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:background="@color/purple_500"
+        android:text="Salvar"
+        app:layout_constraintBottom_toTopOf="@+id/buttonCancelar"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent" />
+
+    <ImageButton
+        android:id="@+id/imageButtonSair"
+        android:layout_width="107dp"
+        android:layout_height="68dp"
+        android:layout_weight="1"
+        android:background="@color/white"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:srcCompat="@drawable/icons8_sair_48" />
+
+    <ImageButton
+        android:id="@+id/imageButtonPerfil"
+        android:layout_width="126dp"
+        android:layout_height="64dp"
+        android:layout_weight="1"
+        android:background="@color/white"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toStartOf="@+id/imageButtonSair"
+        app:srcCompat="@drawable/icons8_usu_rio_de_g_nero_neutro_48" />
+
+    <ImageButton
+        android:id="@+id/imageButtonHome"
+        android:layout_width="130dp"
+        android:layout_height="64dp"
+        android:layout_weight="1"
+        android:background="@color/white"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:srcCompat="@drawable/icons8_card_pio_48" />
+
+</android.support.constraint.ConstraintLayout>

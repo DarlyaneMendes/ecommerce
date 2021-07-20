@@ -1,0 +1,188 @@
+<?xml version="1.0" encoding="utf-8"?>
+<android.support.constraint.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/container"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:paddingLeft="@dimen/activity_horizontal_margin"
+    android:paddingTop="@dimen/activity_vertical_margin"
+    android:paddingRight="@dimen/activity_horizontal_margin"
+    android:paddingBottom="@dimen/activity_vertical_margin">
+
+    <EditText
+        android:id="@+id/editTextQuantidade"
+        android:layout_width="295dp"
+        android:layout_height="40dp"
+        android:ems="10"
+        android:inputType="textPersonName"
+        app:layout_constraintStart_toEndOf="@+id/textViewQuantidade"
+        app:layout_constraintTop_toBottomOf="@+id/editTextItemPedido" />
+
+    <TextView
+        android:id="@+id/textViewQuantidade"
+        android:layout_width="91dp"
+        android:layout_height="31dp"
+        android:layout_marginStart="5dp"
+        android:layout_marginLeft="5dp"
+        android:layout_marginTop="16dp"
+        android:text="Quantidade:"
+        android:textSize="16sp"
+        android:textStyle="bold"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/textViewItemPedido" />
+
+    <EditText
+        android:id="@+id/editTextItemPedido"
+        android:layout_width="341dp"
+        android:layout_height="49dp"
+        android:ems="10"
+        android:inputType="textPersonName"
+        app:layout_constraintStart_toEndOf="@+id/textViewItemPedido"
+        app:layout_constraintTop_toBottomOf="@+id/editTextCpf" />
+
+    <EditText
+        android:id="@+id/editTextCpf"
+        android:layout_width="339dp"
+        android:layout_height="49dp"
+        android:ems="10"
+        android:inputType="textPersonName"
+        app:layout_constraintStart_toEndOf="@+id/textViewCpf"
+        app:layout_constraintTop_toBottomOf="@+id/editTextDataPedido" />
+
+    <TextView
+        android:id="@+id/textViewItemPedido"
+        android:layout_width="46dp"
+        android:layout_height="26dp"
+        android:layout_marginStart="5dp"
+        android:layout_marginLeft="5dp"
+        android:layout_marginTop="16dp"
+        android:text="Item:"
+        android:textSize="16sp"
+        android:textStyle="bold"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/textViewCpf" />
+
+    <TextView
+        android:id="@+id/textViewCpf"
+        android:layout_width="45dp"
+        android:layout_height="35dp"
+        android:layout_marginStart="5dp"
+        android:layout_marginLeft="5dp"
+        android:layout_marginTop="16dp"
+        android:text="CPF:"
+        android:textSize="16sp"
+        android:textStyle="bold"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/textViewDataPedido" />
+
+    <EditText
+        android:id="@+id/editTextDataPedido"
+        android:layout_width="339dp"
+        android:layout_height="45dp"
+        android:ems="10"
+        android:inputType="textPersonName"
+        app:layout_constraintStart_toEndOf="@+id/textViewDataPedido"
+        app:layout_constraintTop_toBottomOf="@+id/editTextCodigoPedido" />
+
+    <TextView
+        android:id="@+id/textViewDataPedido"
+        android:layout_width="45dp"
+        android:layout_height="35dp"
+        android:layout_marginStart="5dp"
+        android:layout_marginLeft="5dp"
+        android:layout_marginTop="16dp"
+        android:text="Data:"
+        android:textSize="16sp"
+        android:textStyle="bold"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/textViewCodigoPedido" />
+
+    <EditText
+        android:id="@+id/editTextCodigoPedido"
+        android:layout_width="319dp"
+        android:layout_height="44dp"
+        android:layout_marginTop="30dp"
+        android:ems="10"
+        android:inputType="textPersonName"
+        app:layout_constraintStart_toEndOf="@+id/textViewCodigoPedido"
+        app:layout_constraintTop_toBottomOf="@+id/textViewCadastroPedido" />
+
+    <TextView
+        android:id="@+id/textViewCodigoPedido"
+        android:layout_width="60dp"
+        android:layout_height="32dp"
+        android:layout_marginStart="5dp"
+        android:layout_marginLeft="5dp"
+        android:layout_marginTop="40dp"
+        android:text="Código:"
+        android:textSize="16sp"
+        android:textStyle="bold"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/textViewCadastroPedido" />
+
+    <TextView
+        android:id="@+id/textViewCadastroPedido"
+        android:layout_width="98dp"
+        android:layout_height="38dp"
+        android:layout_marginStart="16dp"
+        android:layout_marginLeft="16dp"
+        android:layout_marginTop="16dp"
+        android:baselineAligned="false"
+        android:text="Pedido"
+        android:textColor="@color/purple_500"
+        android:textSize="24sp"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <Button
+        android:id="@+id/buttonCancelar"
+        android:layout_width="381dp"
+        android:layout_height="57dp"
+        android:layout_marginBottom="48dp"
+        android:text="Cancelar"
+        app:layout_constraintBottom_toTopOf="@+id/imageButtonPerfil"
+        tools:ignore="MissingConstraints"
+        tools:layout_editor_absoluteX="-8dp" />
+
+    <Button
+        android:id="@+id/buttonSalvar"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:background="@color/purple_500"
+        android:text="Salvar"
+        app:layout_constraintBottom_toTopOf="@+id/buttonCancelar"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent" />
+
+    <ImageButton
+        android:id="@+id/imageButtonSair"
+        android:layout_width="107dp"
+        android:layout_height="68dp"
+        android:layout_weight="1"
+        android:background="@color/white"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:srcCompat="@drawable/icons8_sair_48" />
+
+    <ImageButton
+        android:id="@+id/imageButtonPerfil"
+        android:layout_width="126dp"
+        android:layout_height="64dp"
+        android:layout_weight="1"
+        android:background="@color/white"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toStartOf="@+id/imageButtonSair"
+        app:srcCompat="@drawable/icons8_usu_rio_de_g_nero_neutro_48" />
+
+    <ImageButton
+        android:id="@+id/imageButtonHome"
+        android:layout_width="130dp"
+        android:layout_height="64dp"
+        android:layout_weight="1"
+        android:background="@color/white"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:srcCompat="@drawable/icons8_card_pio_48" />
+
+</android.support.constraint.ConstraintLayout>
