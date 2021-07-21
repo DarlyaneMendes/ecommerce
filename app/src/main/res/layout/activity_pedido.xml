@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="utf-8"?>
-<android.support.constraint.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:app="http://schemas.android.com/apk/res-auto"
     xmlns:tools="http://schemas.android.com/tools"
     android:id="@+id/container"
@@ -102,11 +102,11 @@
         android:id="@+id/editTextCodigoPedido"
         android:layout_width="319dp"
         android:layout_height="44dp"
-        android:layout_marginTop="30dp"
+        android:layout_marginTop="8dp"
         android:ems="10"
         android:inputType="textPersonName"
         app:layout_constraintStart_toEndOf="@+id/textViewCodigoPedido"
-        app:layout_constraintTop_toBottomOf="@+id/textViewCadastroPedido" />
+        app:layout_constraintTop_toTopOf="parent" />
 
     <TextView
         android:id="@+id/textViewCodigoPedido"
@@ -114,75 +114,32 @@
         android:layout_height="32dp"
         android:layout_marginStart="5dp"
         android:layout_marginLeft="5dp"
-        android:layout_marginTop="40dp"
+        android:layout_marginTop="20dp"
         android:text="Código:"
         android:textSize="16sp"
         android:textStyle="bold"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/textViewCadastroPedido" />
-
-    <TextView
-        android:id="@+id/textViewCadastroPedido"
-        android:layout_width="98dp"
-        android:layout_height="38dp"
-        android:layout_marginStart="16dp"
-        android:layout_marginLeft="16dp"
-        android:layout_marginTop="16dp"
-        android:baselineAligned="false"
-        android:text="Pedido"
-        android:textColor="@color/purple_500"
-        android:textSize="24sp"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent" />
 
     <Button
         android:id="@+id/buttonCancelar"
-        android:layout_width="381dp"
-        android:layout_height="57dp"
-        android:layout_marginBottom="48dp"
+        android:layout_width="395dp"
+        android:layout_height="56dp"
+        android:layout_marginBottom="30dp"
         android:text="Cancelar"
-        app:layout_constraintBottom_toTopOf="@+id/imageButtonPerfil"
-        tools:ignore="MissingConstraints"
-        tools:layout_editor_absoluteX="-8dp" />
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        tools:ignore="MissingConstraints" />
 
     <Button
         android:id="@+id/buttonSalvar"
-        android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:background="@color/purple_500"
+        android:layout_width="395dp"
+        android:layout_height="56dp"
+        android:background="@color/teal_700"
         android:text="Salvar"
         app:layout_constraintBottom_toTopOf="@+id/buttonCancelar"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent" />
 
-    <ImageButton
-        android:id="@+id/imageButtonSair"
-        android:layout_width="107dp"
-        android:layout_height="68dp"
-        android:layout_weight="1"
-        android:background="@color/white"
-        app:layout_constraintBottom_toBottomOf="parent"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:srcCompat="@drawable/icons8_sair_48" />
-
-    <ImageButton
-        android:id="@+id/imageButtonPerfil"
-        android:layout_width="126dp"
-        android:layout_height="64dp"
-        android:layout_weight="1"
-        android:background="@color/white"
-        app:layout_constraintBottom_toBottomOf="parent"
-        app:layout_constraintEnd_toStartOf="@+id/imageButtonSair"
-        app:srcCompat="@drawable/icons8_usu_rio_de_g_nero_neutro_48" />
-
-    <ImageButton
-        android:id="@+id/imageButtonHome"
-        android:layout_width="130dp"
-        android:layout_height="64dp"
-        android:layout_weight="1"
-        android:background="@color/white"
-        app:layout_constraintBottom_toBottomOf="parent"
-        app:layout_constraintStart_toStartOf="parent"
-        app:srcCompat="@drawable/icons8_card_pio_48" />
-
-</android.support.constraint.ConstraintLayout>
+</androidx.constraintlayout.widget.ConstraintLayout>

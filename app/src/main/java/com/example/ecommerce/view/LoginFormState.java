@@ -1,6 +1,6 @@
 package com.example.ecommerce.view;
 
-import android.support.annotation.Nullable;
+import androidx.annotation.Nullable;
 
 public class LoginFormState {
     @Nullable

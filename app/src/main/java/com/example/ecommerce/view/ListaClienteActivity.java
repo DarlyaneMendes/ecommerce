@@ -1,17 +1,29 @@
 package com.example.ecommerce.view;
 
+import android.app.Activity;
+
+import androidx.lifecycle.Observer;
+import androidx.lifecycle.ViewModelProvider;
+
+import android.os.Bundle;
+
 import android.content.DialogInterface;
 import android.content.Intent;
-import android.os.Bundle;
-import android.support.annotation.NonNull;
-import android.support.design.widget.FloatingActionButton;
-import android.support.v7.app.AlertDialog;
-import android.support.v7.app.AppCompatActivity;
-import android.support.v7.widget.RecyclerView;
+import android.view.Menu;
+import android.view.MenuInflater;
+import android.view.MenuItem;
 import android.view.View;
 import android.widget.ImageButton;
 import android.widget.TextView;
 
+
+import androidx.appcompat.app.AlertDialog;
+import androidx.annotation.NonNull;
+import androidx.appcompat.app.AppCompatActivity;
+import androidx.recyclerview.widget.RecyclerView;
+import com.google.android.material.floatingactionbutton.FloatingActionButton;
+
+import com.example.ecommerce.R;
 import com.example.ecommerce.viewModel.ClienteViewModel;
 import com.example.ecommerce.databinding.ActivityListaClienteBinding;
 
@@ -29,56 +41,41 @@ public class ListaClienteActivity extends AppCompatActivity {
         binding = ActivityListaClienteBinding.inflate(getLayoutInflater());
         setContentView(binding.getRoot());
 
-        final TextView textViewListaCliente = binding.textViewListaCliente;
+        setTitle("Cliente");
+
         final RecyclerView recyclerViewCliente = binding.recyclerViewCliente;
-        final FloatingActionButton floatingActionButtonAdicionar = binding.floatingActionButtonAdicionar;
-        final ImageButton imageButtonHome = binding.imageButtonHome;
-        final ImageButton imageButtonCliente = binding.imageButtonCliente;
-        final ImageButton imageButtonEditar = binding.imageButtonEditar;
-        final ImageButton imageButtonExcluir = binding.imageButtonExcluir;
-        final ImageButton imageButtonSair = binding.imageButtonSair;
 
-        floatingActionButtonAdicionar.setOnClickListener(new View.OnClickListener() {
-            @Override
-            public void onClick(View v) {
-                Intent intent = new Intent(ListaClienteActivity.this, ClienteActivity.class);
+    }
+
+    @Override
+    public boolean onCreateOptionsMenu(Menu menu) {
+
+        MenuInflater inflater = getMenuInflater();
+        inflater.inflate(R.menu.menu, menu);
+
+        return super.onCreateOptionsMenu(menu);
+    }
+
+    @Override
+    public boolean onOptionsItemSelected(MenuItem item) {
+        switch (item.getItemId()) {
+            case R.id.action_novo:
+                Intent intent = new Intent(this, ClienteActivity.class);
                 startActivity(intent);
-            }
-        });
+                break;
 
-        imageButtonHome.setOnClickListener(new View.OnClickListener() {
-            @Override
-            public void onClick(View v) {
-                Intent intent = new Intent(ListaClienteActivity.this, HomeActivity.class);
-                startActivity(intent);
-            }
-        });
+            case R.id.action_editar:
 
-        imageButtonSair.setOnClickListener(new View.OnClickListener() {
-            @Override
-            public void onClick(View v) {
-                AlertDialog.Builder builder = new AlertDialog.Builder(ListaClienteActivity.this);
-                builder.setMessage("Deseja sair do aplicativo?");
-                builder.setCancelable(true);
-                builder.setPositiveButton("Ok", new DialogInterface.OnClickListener() {
-                    @Override
-                    public void onClick(DialogInterface dialog, int which) {
-                        finishAffinity();
-                        System.exit(0);
+                break;
 
-                    }
-                });
-                builder.setNegativeButton("Cancelar", new DialogInterface.OnClickListener() {
-                    @Override
-                    public void onClick(DialogInterface dialog, int which) {
-                        dialog.cancel();
+            case R.id.action_excluir:
 
-                    }
-                });
-                AlertDialog alert = builder.create();
-                alert.show();
-            }
-        });
+                break;
 
+            case R.id.action_buscar:
+
+                break;
+        }
+        return false;
     }
 }

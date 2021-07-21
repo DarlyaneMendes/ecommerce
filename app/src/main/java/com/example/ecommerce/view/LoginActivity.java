@@ -1,13 +1,8 @@
 package com.example.ecommerce.view;
 
 import android.app.Activity;
-import android.arch.lifecycle.Observer;
-import android.arch.lifecycle.ViewModelProvider;
 import android.content.Intent;
 import android.os.Bundle;
-import android.support.annotation.Nullable;
-import android.support.annotation.StringRes;
-import android.support.v7.app.AppCompatActivity;
 import android.text.Editable;
 import android.text.TextWatcher;
 import android.view.KeyEvent;
@@ -19,10 +14,18 @@ import android.widget.ProgressBar;
 import android.widget.TextView;
 import android.widget.Toast;
 
-import com.example.ecommerce.viewModel.LoginViewModel;
-import com.example.ecommerce.viewModel.LoginViewModelFactory;
+import androidx.annotation.Nullable;
+import androidx.annotation.StringRes;
+import androidx.appcompat.app.AppCompatActivity;
+import androidx.lifecycle.Observer;
+import androidx.lifecycle.ViewModelProvider;
+import androidx.viewbinding.ViewBinding;
+
 import com.example.ecommerce.R;
 import com.example.ecommerce.databinding.ActivityLoginBinding;
+import com.example.ecommerce.databinding.ActivityMenuBinding;
+import com.example.ecommerce.viewModel.LoginViewModel;
+import com.example.ecommerce.viewModel.LoginViewModelFactory;
 
 public class LoginActivity extends AppCompatActivity {
 
@@ -45,14 +48,13 @@ public class LoginActivity extends AppCompatActivity {
         final Button registerButton = binding.cadastrar;
         final ProgressBar loadingProgressBar = binding.loading;
 
-        loginViewModel.getLoginFormState().observe(this, new Observer<LoginFormState>() {
+        loginViewModel.getLoginFormState().observe(this, new Observer<com.example.ecommerce.view.LoginFormState>() {
             @Override
-            public void onChanged(@Nullable LoginFormState loginFormState) {
+            public void onChanged(@Nullable com.example.ecommerce.view.LoginFormState loginFormState) {
                 if (loginFormState == null) {
                     return;
                 }
                 loginButton.setEnabled(loginFormState.isDataValid());
-
                 if (loginFormState.getUsernameError() != null) {
                     usernameEditText.setError(getString(loginFormState.getUsernameError()));
                 }
@@ -62,9 +64,9 @@ public class LoginActivity extends AppCompatActivity {
             }
         });
 
-        loginViewModel.getLoginResult().observe(this, new Observer<LoginResult>() {
+        loginViewModel.getLoginResult().observe(this, new Observer<com.example.ecommerce.view.LoginResult>() {
             @Override
-            public void onChanged(@Nullable LoginResult loginResult) {
+            public void onChanged(@Nullable com.example.ecommerce.view.LoginResult loginResult) {
                 if (loginResult == null) {
                     return;
                 }
@@ -77,6 +79,7 @@ public class LoginActivity extends AppCompatActivity {
                 }
                 setResult(Activity.RESULT_OK);
 
+                //Complete and destroy login activity once successful
                 finish();
             }
         });
@@ -84,12 +87,12 @@ public class LoginActivity extends AppCompatActivity {
         TextWatcher afterTextChangedListener = new TextWatcher() {
             @Override
             public void beforeTextChanged(CharSequence s, int start, int count, int after) {
-
+                // ignore
             }
 
             @Override
             public void onTextChanged(CharSequence s, int start, int before, int count) {
-
+                // ignore
             }
 
             @Override
@@ -118,7 +121,7 @@ public class LoginActivity extends AppCompatActivity {
                 loadingProgressBar.setVisibility(View.VISIBLE);
                 loginViewModel.login(usernameEditText.getText().toString(),
                         passwordEditText.getText().toString());
-                Intent intent = new Intent(LoginActivity.this, HomeActivity.class);
+                Intent intent = new Intent(LoginActivity.this, MenuActivity.class);
                 startActivity(intent);
             }
         });
@@ -132,8 +135,9 @@ public class LoginActivity extends AppCompatActivity {
         });
     }
 
-    private void updateUiWithUser(LoggedInUserView model) {
-        String welcome = getString(R.string.welcome) + " " + model.getDisplayName();
+    private void updateUiWithUser(com.example.ecommerce.view.LoggedInUserView model) {
+        String welcome = getString(R.string.welcome) + model.getDisplayName();
+        // TODO : initiate successful logged in experience
         Toast.makeText(getApplicationContext(), welcome, Toast.LENGTH_LONG).show();
     }
 

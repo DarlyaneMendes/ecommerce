@@ -1,32 +1,69 @@
 <?xml version="1.0" encoding="utf-8"?>
 <manifest xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
     package="com.example.ecommerce">
 
     <application
         android:allowBackup="true"
+        android:appComponentFactory="androidx.core.app.CoreComponentFactory"
         android:icon="@mipmap/ic_launcher"
         android:label="@string/app_name"
         android:roundIcon="@mipmap/ic_launcher_round"
         android:supportsRtl="true"
-        android:theme="@style/Theme.Ecommerce">
-        <activity android:name=".view.LoginActivity">
-            <intent-filter>
-                <action android:name="android.intent.action.MAIN" />
+        android:theme="@style/Theme.Ecommerce"
+        tools:replace="android:appComponentFactory">
 
-                <category android:name="android.intent.category.LAUNCHER" />
-            </intent-filter>
+        <activity
+            android:name=".view.LoginActivity">
+        <intent-filter>
+            <action android:name="android.intent.action.MAIN" />
+
+            <category android:name="android.intent.category.LAUNCHER" />
+        </intent-filter>
         </activity>
-        <activity android:name=".view.ClienteActivity"></activity>
-        <activity android:name=".view.ProdutoActivity"></activity>
-        <activity android:name=".view.PedidoActivity"></activity>
-        <activity android:name=".view.CategoriaActivity"></activity>
-        <activity android:name=".view.RelatorioActivity"></activity>
-        <activity android:name=".view.HomeActivity"></activity>
-        <activity android:name=".view.ListaClienteActivity"></activity>
-        <activity android:name=".view.ListaProdutoActivity"></activity>
-        <activity android:name=".view.ListaPedidoActivity"></activity>
-        <activity android:name=".view.ListaCategoriaActivity"></activity>
-        <activity android:name=".view.ListaRelatorioActivity"></activity>
+        <activity android:name=".view.ClienteActivity">
+
+        </activity>
+        <activity android:name=".view.ProdutoActivity">
+
+        </activity>
+        <activity android:name=".view.PedidoActivity">
+
+        </activity>
+        <activity android:name=".view.CategoriaActivity" >
+
+        </activity>
+        <activity android:name=".view.RelatorioActivity">
+
+        </activity>
+        <activity android:name=".view.HomeActivity">
+
+        </activity>
+        <activity android:name=".view.ListaClienteActivity">
+
+        </activity>
+        <activity android:name=".view.ListaProdutoActivity">
+
+        </activity>
+        <activity android:name=".view.ListaPedidoActivity">
+
+        </activity>
+        <activity android:name=".view.ListaCategoriaActivity">
+
+        </activity>
+        <activity android:name=".view.ListaRelatorioActivity">
+
+        </activity>
+        <activity android:name=".view.MenuActivity"
+            android:theme="@style/Theme.Ecommerce.NoActionBar">
+
+        </activity>
+        <activity android:name=".view.MenuFragment"
+            android:theme="@style/Theme.Ecommerce.NoActionBar"
+            tools:ignore="Instantiatable">
+
+        </activity>
+
     </application>
 
 </manifest>

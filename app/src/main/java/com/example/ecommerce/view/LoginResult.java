@@ -1,6 +1,6 @@
 package com.example.ecommerce.view;
 
-import android.support.annotation.Nullable;
+import androidx.annotation.Nullable;
 
 public class LoginResult {
     @Nullable
@@ -19,7 +19,7 @@ public class LoginResult {
     }
 
     @Nullable
-    LoggedInUserView getSuccess() {
+    com.example.ecommerce.view.LoggedInUserView getSuccess() {
 
         return success;
     }
