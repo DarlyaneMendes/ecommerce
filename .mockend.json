@@ -1,0 +1,27 @@
+{
+  "data": {
+    "posts": [
+      {
+        "codCategoria": 01,
+        "nomeCategoria": "DORmmYUfGE",
+      },
+      {
+        "codCategoria": 02,
+        "nomeCategoria": "6lJcfVQWXw",
+      },
+      {
+        "codCategoria": 03,
+        "nomeCategoria": "tDqazUzb7a",
+      },
+      {
+        "codCategoria": 04,
+        "nomeCategoria": "tUND1JWxBA",
+        "views": 96
+      },
+      {
+        "codCategoria": 05,
+        "nomeCategoria": "WLtoFknTBQ",
+      }
+    ]
+  }
+}
