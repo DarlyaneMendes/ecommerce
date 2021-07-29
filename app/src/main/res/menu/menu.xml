@@ -15,8 +15,4 @@
         android:id="@+id/action_excluir"
         android:orderInCategory="102"
         android:title="@string/action_excluir"/>
-    <item
-        android:id="@+id/action_buscar"
-        android:orderInCategory="103"
-        android:title="Buscar" />
 </menu>

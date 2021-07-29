@@ -2,17 +2,65 @@
 <androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:app="http://schemas.android.com/apk/res-auto"
     xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/container"
     android:layout_width="match_parent"
-    android:layout_height="match_parent">
+    android:layout_height="match_parent"
+    android:paddingLeft="@dimen/activity_horizontal_margin"
+    android:paddingTop="@dimen/activity_vertical_margin"
+    android:paddingRight="@dimen/activity_horizontal_margin"
+    android:paddingBottom="@dimen/activity_vertical_margin">
 
-    <androidx.recyclerview.widget.RecyclerView
-        android:id="@+id/recyclerViewCliente"
-        android:layout_width="409dp"
-        android:layout_height="698dp"
-        android:layout_marginTop="20dp"
+    <Button
+        android:id="@+id/buttonExcluirCliente"
+        android:layout_width="395dp"
+        android:layout_height="56dp"
+        android:layout_marginBottom="30dp"
+        android:text="Excluir"
         app:layout_constraintBottom_toBottomOf="parent"
-        app:layout_constraintTop_toTopOf="parent"
-        tools:ignore="MissingConstraints"
-        tools:layout_editor_absoluteX="1dp" />
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent" />
 
+    <Button
+        android:id="@+id/buttonBuscarCliente"
+        android:layout_width="395dp"
+        android:layout_height="56dp"
+        android:text="Buscar"
+        app:layout_constraintBottom_toTopOf="@+id/buttonExcluirCliente"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent" />
+
+    <Button
+        android:id="@+id/buttonNovoCliente"
+        android:layout_width="395dp"
+        android:layout_height="56dp"
+        android:background="@color/teal_700"
+        android:text="Novo/Atualizar"
+        app:layout_constraintBottom_toTopOf="@+id/buttonBuscarCliente"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent" />
+
+    <EditText
+        android:id="@+id/editTextCpf"
+        android:layout_width="338dp"
+        android:layout_height="38dp"
+        android:layout_marginTop="8dp"
+        android:ems="10"
+        android:imeActionLabel="preenchimento_obrigatorio"
+        android:inputType="textPersonName"
+        android:textSize="14sp"
+        app:layout_constraintStart_toEndOf="@+id/textViewCpf"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <TextView
+        android:id="@+id/textViewCpf"
+        android:layout_width="39dp"
+        android:layout_height="23dp"
+        android:layout_marginStart="5dp"
+        android:layout_marginLeft="5dp"
+        android:layout_marginTop="20dp"
+        android:text="CPF:"
+        android:textSize="14sp"
+        android:textStyle="bold"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
 </androidx.constraintlayout.widget.ConstraintLayout>

@@ -1,33 +1,36 @@
 package com.example.ecommerce.view;
 
-import android.app.Activity;
-
-import androidx.lifecycle.Observer;
-import androidx.lifecycle.ViewModelProvider;
-
 import android.os.Bundle;
 
-import android.content.DialogInterface;
 import android.content.Intent;
-import android.view.Menu;
-import android.view.MenuInflater;
-import android.view.MenuItem;
 import android.view.View;
-import android.widget.ImageButton;
-import android.widget.TextView;
+import android.widget.Button;
+import android.widget.EditText;
+import android.widget.Toast;
 
-
-import androidx.appcompat.app.AlertDialog;
 import androidx.annotation.NonNull;
 import androidx.appcompat.app.AppCompatActivity;
-import androidx.recyclerview.widget.RecyclerView;
-import com.google.android.material.floatingactionbutton.FloatingActionButton;
 
-import com.example.ecommerce.R;
+
+import com.example.ecommerce.ClienteAPI;
+import com.example.ecommerce.Constant;
+
 import com.example.ecommerce.viewModel.ClienteViewModel;
 import com.example.ecommerce.databinding.ActivityListaClienteBinding;
 
+import java.util.List;
+
+import retrofit2.Call;
+import retrofit2.Callback;
+import retrofit2.Response;
+import retrofit2.Retrofit;
+import retrofit2.converter.gson.GsonConverterFactory;
+
+import static com.example.ecommerce.Constant.BASE_URL;
+
 public class ListaClienteActivity extends AppCompatActivity {
+
+    EditText editTextCpf;
 
     private ClienteViewModel clienteViewModel;
     private @NonNull ActivityListaClienteBinding binding;
@@ -43,39 +46,104 @@ public class ListaClienteActivity extends AppCompatActivity {
 
         setTitle("Cliente");
 
-        final RecyclerView recyclerViewCliente = binding.recyclerViewCliente;
+        editTextCpf = binding.editTextCpf;
 
-    }
+        final Button buttonNovo = binding.buttonNovoCliente;
+        final Button buttonBuscar = binding.buttonBuscarCliente;
+        final Button buttonExcluir = binding.buttonExcluirCliente;
 
-    @Override
-    public boolean onCreateOptionsMenu(Menu menu) {
+        Retrofit retrofit = new Retrofit.Builder()
+                .baseUrl(BASE_URL)
+                .addConverterFactory(new Constant.NullOnEmptyConverterFactory())
+                .addConverterFactory(GsonConverterFactory.create())
+                .build();
 
-        MenuInflater inflater = getMenuInflater();
-        inflater.inflate(R.menu.menu, menu);
+        buttonNovo.setOnClickListener(new View.OnClickListener() {
 
-        return super.onCreateOptionsMenu(menu);
-    }
-
-    @Override
-    public boolean onOptionsItemSelected(MenuItem item) {
-        switch (item.getItemId()) {
-            case R.id.action_novo:
-                Intent intent = new Intent(this, ClienteActivity.class);
+            @Override
+            public void onClick(View v) {
+                Intent intent = new Intent(ListaClienteActivity.this, ClienteActivity.class);
                 startActivity(intent);
-                break;
+                                          }
+        });
 
-            case R.id.action_editar:
+        buttonBuscar.setOnClickListener(new View.OnClickListener() {
 
-                break;
+            @Override
+            public void onClick(View v) {
 
-            case R.id.action_excluir:
+                final String cpf = editTextCpf.getText().toString();
 
-                break;
+                ClienteAPI service = retrofit.create(ClienteAPI.class);
+                Call<List<ClienteViewModel>> call = service.getCliente(cpf);
 
-            case R.id.action_buscar:
 
-                break;
-        }
-        return false;
+                call.enqueue(new Callback<List<ClienteViewModel>>() {
+                    @Override
+                    public void onResponse(Call<List<ClienteViewModel>> call, Response<List<ClienteViewModel>> response) {
+
+
+                        if (response.isSuccessful()) {
+
+                            ClienteViewModel listaCategoriaResponse = (ClienteViewModel) response.body();
+
+                        }
+                    }
+
+                    @Override
+                    public void onFailure(Call<List<ClienteViewModel>> call, Throwable t) {
+
+                    }
+
+                });
+
+                Toast.makeText(ListaClienteActivity.this, "Funcionalidade não implementada.",
+                        Toast.LENGTH_SHORT).show();
+            }
+
+        });
+
+
+        buttonExcluir.setOnClickListener(new View.OnClickListener() {
+
+            @Override
+            public void onClick(View v) {
+
+
+                final String cpf = editTextCpf.getText().toString();
+
+                    Integer codigo = (Integer.parseInt(String.valueOf(cpf)));
+
+                    ClienteAPI service = retrofit.create(ClienteAPI.class);
+                    Call<ClienteViewModel> call = service.deleteCliente(codigo);
+
+
+                    call.enqueue(new Callback<ClienteViewModel>() {
+                        @Override
+                        public void onResponse(Call<ClienteViewModel> call, Response<ClienteViewModel> response) {
+
+
+                            Toast.makeText(ListaClienteActivity.this, "Cliente excluído com sucesso",
+                                    Toast.LENGTH_SHORT).show();
+
+                            if (response.isSuccessful()) {
+
+                                ClienteViewModel listaClienteResponse = response.body();
+
+                            }
+                        }
+
+                        @Override
+                        public void onFailure(Call<ClienteViewModel> call, Throwable t) {
+
+                        }
+
+                    });
+
+                editTextCpf.getText().clear();
+            }
+        });
     }
+
+
 }

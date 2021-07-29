@@ -40,7 +40,7 @@ public class MenuActivity extends AppCompatActivity {
             binding.appBarMenu.toolbar.setOnClickListener(new View.OnClickListener() {
                 @Override
                 public void onClick(View view) {
-                    Snackbar.make(view, "Replace with your own action", Snackbar.LENGTH_LONG)
+                    Snackbar.make(view, "Clique em Home para a página inicial.", Snackbar.LENGTH_LONG)
                             .setAction("Action", null).show();
                 }
             });

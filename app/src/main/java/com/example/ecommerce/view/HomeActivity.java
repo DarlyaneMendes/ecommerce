@@ -1,6 +1,5 @@
 package com.example.ecommerce.view;
 
-import android.content.DialogInterface;
 import android.content.Intent;
 import android.os.Bundle;
 import android.view.View;
@@ -8,14 +7,11 @@ import android.widget.ImageButton;
 import android.widget.TextView;
 
 import androidx.appcompat.app.AppCompatActivity;
-import androidx.appcompat.app.AlertDialog;
 
-import com.example.ecommerce.viewModel.HomeViewModel;
 import com.example.ecommerce.databinding.ActivityHomeBinding;
 
 public class HomeActivity extends AppCompatActivity {
 
-    private HomeViewModel homeViewModel;
     private ActivityHomeBinding binding;
 
     Intent intent = getIntent();
@@ -107,7 +103,7 @@ public class HomeActivity extends AppCompatActivity {
         imageButtonRelatorio.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
-                Intent intent = new Intent(HomeActivity.this, ListaRelatorioActivity.class);
+                Intent intent = new Intent(HomeActivity.this, RelatorioActivity.class);
                 startActivity(intent);
             }
         });
@@ -115,7 +111,7 @@ public class HomeActivity extends AppCompatActivity {
         textViewRelatorio.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
-                Intent intent = new Intent(HomeActivity.this, ListaRelatorioActivity.class);
+                Intent intent = new Intent(HomeActivity.this, RelatorioActivity.class);
                 startActivity(intent);
             }
         });

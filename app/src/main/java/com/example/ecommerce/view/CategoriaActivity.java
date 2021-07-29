@@ -1,45 +1,35 @@
 package com.example.ecommerce.view;
 
-import android.content.Context;
 import android.content.DialogInterface;
 import android.content.Intent;
 import android.os.Bundle;
-import android.view.Menu;
-import android.view.MenuInflater;
 import android.view.View;
 import android.widget.Button;
-import android.widget.TextView;
+import android.widget.EditText;
 import android.widget.Toast;
 
 import androidx.appcompat.app.AppCompatActivity;
 import androidx.appcompat.app.AlertDialog;
-import androidx.core.view.GravityCompat;
-import androidx.drawerlayout.widget.DrawerLayout;
 
-import com.example.ecommerce.R;
-import com.example.ecommerce.model.Categoria;
+import com.example.ecommerce.CategoriaAPI;
+import com.example.ecommerce.Constant;
 import com.example.ecommerce.viewModel.CategoriaViewModel;
 import com.example.ecommerce.viewModel.ClienteViewModel;
 import com.example.ecommerce.databinding.ActivityCategoriaBinding;
 
+import okhttp3.RequestBody;
+import retrofit2.Call;
+import retrofit2.Callback;
+import retrofit2.Response;
+import retrofit2.Retrofit;
+import retrofit2.converter.gson.GsonConverterFactory;
+
+import static com.example.ecommerce.Constant.BASE_URL;
+
 public class CategoriaActivity extends AppCompatActivity {
 
-    final String TAG = getClass().getSimpleName();
-
-    public static Context contexto;
-    Button buttonSalvar;
-    Button buttonCancelar;
-
-    TextView textViewCodigo;
-    TextView textViewDescricaoCatgoria;
-
-    boolean NOVO = false;
-
-    public void atualizarCampos (Categoria categoria){
-
-        textViewCodigo.setText(categoria.getCodCategoria());
-        textViewDescricaoCatgoria.setText(categoria.getNomeCategoria());
-    }
+    EditText editTextCodigo;
+    EditText editTextDescricao;
 
     private ClienteViewModel clienteViewModel;
     private ActivityCategoriaBinding binding;
@@ -55,47 +45,62 @@ public class CategoriaActivity extends AppCompatActivity {
 
         setTitle("Cadastro de Categoria");
 
-        contexto = getBaseContext();
+        editTextCodigo = binding.editTextCodigo;
+        editTextDescricao = binding.editTextDescricao;
 
-        final CategoriaViewModel categoriaViewModel = new CategoriaViewModel();
-
-        final TextView textViewCodigo = binding.textViewCodigo;
-        final TextView textViewDescricaoCategoria = binding.textViewDescricao;
         final Button buttonSalvar = binding.buttonSalvar;
         final Button buttonCancelar = binding.buttonCancelar;
 
+        Retrofit retrofit = new Retrofit.Builder()
+                .baseUrl(BASE_URL)
+                .addConverterFactory(new Constant.NullOnEmptyConverterFactory())
+                .addConverterFactory(GsonConverterFactory.create())
+                .build();
 
-        /*buttonSalvar.setOnClickListener(new View.OnClickListener() {
+        buttonSalvar.setOnClickListener(new View.OnClickListener() {
+
             @Override
             public void onClick(View v) {
 
-                if (NOVO == true) {
+                CategoriaViewModel listaCategoriaResponse = new CategoriaViewModel(
+                        editTextCodigo.getText().toString(), editTextDescricao.getText().toString());
 
-                    if (categoriaViewModel.salvarCategoria(textViewCodigo.getText().toString(),
-                            textViewDescricaoCategoria.getText().toString())) {
+                final String json  =  "{\"codCategoria\": \"" +
+                        editTextCodigo.getText().toString() +
+                        "\", \"nomeCategoria\": \"" + editTextDescricao.getText().toString() +
+                        "\"}";
+
+                RequestBody body = RequestBody.create(okhttp3.MediaType.parse("application/json; charset=utf-8"), json);
+
+                CategoriaAPI service = retrofit.create(CategoriaAPI.class);
+                Call<CategoriaViewModel> call = service.postCategoria(body);
+
+
+                call.enqueue(new Callback<CategoriaViewModel>() {
+                    @Override
+                    public void onResponse(Call<CategoriaViewModel> call, Response<CategoriaViewModel> response) {
 
                         Toast.makeText(CategoriaActivity.this, "Categoria salvo com sucesso",
                                 Toast.LENGTH_SHORT).show();
-                    } else {
 
-                        Toast.makeText(CategoriaActivity.this, "Categoria não foi salvo com sucesso",
-                                Toast.LENGTH_SHORT).show();
+                        Intent intent = new Intent(CategoriaActivity.this, ListaCategoriaActivity.class);
+                        startActivity(intent);
+
+                        if (response.isSuccessful()){
+
+                            CategoriaViewModel listaCategoriaResponse = response.body();
+
+                        }
                     }
-                } else {
-                    if (categoriaViewModel.atualizarCategoria(textViewCodigo.getText().toString(),
-                            textViewDescricaoCategoria.getText().toString())) {
 
-                        Toast.makeText(CategoriaActivity.this, "Categoria atualizado com sucesso",
-                                Toast.LENGTH_SHORT).show();
-                    } else {
+                    @Override
+                    public void onFailure(Call<CategoriaViewModel> call, Throwable t) {
 
-                        Toast.makeText(CategoriaActivity.this, "Categoria não foi atualizado com sucesso",
-                                Toast.LENGTH_SHORT).show();
                     }
-                }
-                NOVO = false;
+
+                });
             }
-        });*/
+        });
 
                 buttonCancelar.setOnClickListener(new View.OnClickListener() {
                     @Override
@@ -122,4 +127,4 @@ public class CategoriaActivity extends AppCompatActivity {
                     }
                 });
             }
-        }
+}

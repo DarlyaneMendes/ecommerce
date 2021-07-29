@@ -1,28 +1,36 @@
 package com.example.ecommerce.view;
 
-import android.content.DialogInterface;
 import android.content.Intent;
 import android.os.Bundle;
-import android.view.Menu;
-import android.view.MenuInflater;
-import android.view.MenuItem;
 import android.view.View;
-import android.widget.ImageButton;
-import android.widget.TextView;
+import android.widget.Button;
+import android.widget.EditText;
+import android.widget.Toast;
 
 import androidx.appcompat.app.AppCompatActivity;
-import androidx.appcompat.app.AlertDialog;
 import androidx.annotation.NonNull;
-import androidx.recyclerview.widget.RecyclerView;
-import com.google.android.material.floatingactionbutton.FloatingActionButton;
 
-import com.example.ecommerce.R;
-import com.example.ecommerce.viewModel.ClienteViewModel;
+import com.example.ecommerce.Constant;
+import com.example.ecommerce.ProdutoAPI;
+import com.example.ecommerce.viewModel.ProdutoViewModel;
+
 import com.example.ecommerce.databinding.ActivityListaProdutoBinding;
+
+import java.util.List;
+
+import retrofit2.Call;
+import retrofit2.Callback;
+import retrofit2.Response;
+import retrofit2.Retrofit;
+import retrofit2.converter.gson.GsonConverterFactory;
+
+import static com.example.ecommerce.Constant.BASE_URL;
 
 public class ListaProdutoActivity extends AppCompatActivity {
 
-    private ClienteViewModel clienteViewModel;
+    EditText editTextCodigo;
+
+    private ProdutoViewModel ProdutoViewModel;
     private @NonNull ActivityListaProdutoBinding binding;
 
     Intent intent = getIntent();
@@ -36,39 +44,103 @@ public class ListaProdutoActivity extends AppCompatActivity {
 
         setTitle("Produto");
 
-        final RecyclerView recyclerViewProduto = binding.recyclerViewProduto;
 
-    }
+        editTextCodigo = binding.editTextCodigoProduto;
 
-    @Override
-    public boolean onCreateOptionsMenu(Menu menu) {
+        final Button buttonNovo = binding.buttonNovoProduto;
+        final Button buttonBuscar = binding.buttonBuscarProduto;
+        final Button buttonExcluir = binding.buttonExcluirProduto;
 
-        MenuInflater inflater = getMenuInflater();
-        inflater.inflate(R.menu.menu, menu);
+        Retrofit retrofit = new Retrofit.Builder()
+                .baseUrl(BASE_URL)
+                .addConverterFactory(new Constant.NullOnEmptyConverterFactory())
+                .addConverterFactory(GsonConverterFactory.create())
+                .build();
 
-        return super.onCreateOptionsMenu(menu);
-    }
+        buttonNovo.setOnClickListener(new View.OnClickListener() {
 
-    @Override
-    public boolean onOptionsItemSelected(MenuItem item) {
-        switch (item.getItemId()) {
-            case R.id.action_novo:
-                Intent intent = new Intent(this, ProdutoActivity.class);
+            @Override
+            public void onClick(View v) {
+
+                Intent intent = new Intent(ListaProdutoActivity.this, ProdutoActivity.class);
                 startActivity(intent);
-                break;
+            }
+        });
 
-            case R.id.action_editar:
+        buttonBuscar.setOnClickListener(new View.OnClickListener() {
 
-                break;
+            @Override
+            public void onClick(View v) {
 
-            case R.id.action_excluir:
+                final String codProduto = editTextCodigo.getText().toString();
 
-                break;
+                ProdutoAPI service = retrofit.create(ProdutoAPI.class);
+                Call<List<ProdutoViewModel>> call = service.getProduto(codProduto);
 
-            case R.id.action_buscar:
 
-                break;
-        }
-        return false;
+                call.enqueue(new Callback<List<ProdutoViewModel>>() {
+                    @Override
+                    public void onResponse(Call<List<ProdutoViewModel>> call, Response<List<ProdutoViewModel>> response) {
+
+
+                        if (response.isSuccessful()) {
+
+                            ProdutoViewModel listaProdutoResponse = (ProdutoViewModel) response.body();
+
+                        }
+                    }
+
+                    @Override
+                    public void onFailure(Call<List<ProdutoViewModel>> call, Throwable t) {
+
+                    }
+
+                });
+
+                Toast.makeText(ListaProdutoActivity.this, "Funcionalidade não implementada.",
+                        Toast.LENGTH_SHORT).show();
+            }
+        });
+
+        buttonExcluir.setOnClickListener(new View.OnClickListener() {
+
+            @Override
+            public void onClick(View v) {
+
+
+                final String codProduto = editTextCodigo.getText().toString();
+
+                    Integer codigo = (Integer.parseInt(String.valueOf(codProduto)));
+
+                    ProdutoAPI service = retrofit.create(ProdutoAPI.class);
+                    Call<ProdutoViewModel> call = service.deleteProduto(codigo);
+
+
+                    call.enqueue(new Callback<ProdutoViewModel>() {
+                        @Override
+                        public void onResponse(Call<ProdutoViewModel> call, Response<ProdutoViewModel> response) {
+
+
+                            Toast.makeText(ListaProdutoActivity.this, "Produto excluído com sucesso",
+                                    Toast.LENGTH_SHORT).show();
+
+                            if (response.isSuccessful()) {
+
+                                ProdutoViewModel listaProdutoResponse = response.body();
+
+                            }
+                        }
+
+                        @Override
+                        public void onFailure(Call<ProdutoViewModel> call, Throwable t) {
+
+                        }
+
+                    });
+
+                editTextCodigo.getText().clear();
+            }
+        });
+
     }
 }

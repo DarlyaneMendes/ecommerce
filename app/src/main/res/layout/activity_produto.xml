@@ -19,6 +19,15 @@
         app:layout_constraintStart_toEndOf="@+id/textViewQuantidadeDisponivel"
         app:layout_constraintTop_toBottomOf="@+id/editTextCategoriaProduto" />
 
+    <EditText
+        android:id="@+id/editTextPreco"
+        android:layout_width="318dp"
+        android:layout_height="48dp"
+        android:ems="10"
+        android:inputType="textPersonName"
+        app:layout_constraintStart_toEndOf="@+id/textViewPreco"
+        app:layout_constraintTop_toBottomOf="@+id/editTextQuantidadeDisponivel" />
+
     <TextView
         android:id="@+id/textViewQuantidadeDisponivel"
         android:layout_width="172dp"
@@ -31,6 +40,19 @@
         android:textStyle="bold"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toBottomOf="@+id/textViewCategoriaProduto" />
+
+    <TextView
+        android:id="@+id/textViewPreco"
+        android:layout_width="67dp"
+        android:layout_height="26dp"
+        android:layout_marginStart="5dp"
+        android:layout_marginLeft="5dp"
+        android:layout_marginTop="16dp"
+        android:text="Preço:"
+        android:textSize="16sp"
+        android:textStyle="bold"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/textViewQuantidadeDisponivel" />
 
     <EditText
         android:id="@+id/editTextCategoriaProduto"
@@ -82,7 +104,7 @@
         android:layout_height="43dp"
         android:layout_marginTop="8dp"
         android:ems="10"
-        android:inputType="textPersonName"
+        android:inputType="number"
         app:layout_constraintStart_toEndOf="@+id/textViewCodigoProduto"
         app:layout_constraintTop_toTopOf="parent" />
 

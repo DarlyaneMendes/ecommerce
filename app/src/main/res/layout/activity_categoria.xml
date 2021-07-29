@@ -12,13 +12,13 @@
     tools:menu="@menu/activity_menu_drawer">
 
     <EditText
-        android:id="@+id/editTextTextDescricao"
+        android:id="@+id/editTextDescricao"
         android:layout_width="293dp"
         android:layout_height="40dp"
         android:ems="10"
         android:inputType="textPersonName"
         app:layout_constraintStart_toEndOf="@+id/textViewDescricao"
-        app:layout_constraintTop_toBottomOf="@+id/editTextTextCodigo" />
+        app:layout_constraintTop_toBottomOf="@+id/editTextCodigo" />
 
     <TextView
         android:id="@+id/textViewDescricao"
@@ -34,7 +34,7 @@
         app:layout_constraintTop_toBottomOf="@+id/textViewCodigo" />
 
     <EditText
-        android:id="@+id/editTextTextCodigo"
+        android:id="@+id/editTextCodigo"
         android:layout_width="304dp"
         android:layout_height="42dp"
         android:layout_marginTop="8dp"
@@ -63,6 +63,7 @@
         android:layout_marginBottom="30dp"
         android:text="Cancelar"
         app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
         tools:ignore="MissingConstraints" />
 

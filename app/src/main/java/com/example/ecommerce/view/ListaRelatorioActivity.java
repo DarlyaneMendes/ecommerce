@@ -1,30 +1,20 @@
 package com.example.ecommerce.view;
 
-import android.content.DialogInterface;
 import android.content.Intent;
 import android.os.Bundle;
 import android.view.Menu;
 import android.view.MenuInflater;
 import android.view.MenuItem;
-import android.view.View;
-import android.widget.ImageButton;
-import android.widget.TextView;
 
 import androidx.appcompat.app.AppCompatActivity;
-import androidx.appcompat.app.AlertDialog;
-import androidx.annotation.NonNull;
-import androidx.recyclerview.widget.RecyclerView;
 
 import com.example.ecommerce.R;
-import com.google.android.material.floatingactionbutton.FloatingActionButton;
 
 import com.example.ecommerce.viewModel.ClienteViewModel;
-import com.example.ecommerce.databinding.ActivityListaRelatorioBinding;
 
 public class ListaRelatorioActivity extends AppCompatActivity {
 
     private ClienteViewModel clienteViewModel;
-    private @NonNull ActivityListaRelatorioBinding binding;
 
     Intent intent = getIntent();
 
@@ -32,12 +22,6 @@ public class ListaRelatorioActivity extends AppCompatActivity {
     public void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
 
-        binding = ActivityListaRelatorioBinding.inflate(getLayoutInflater());
-        setContentView(binding.getRoot());
-
-        setTitle("Relatorio");
-
-        final RecyclerView recyclerViewRelatorio = binding.recyclerViewRelatorio;
 
     }
 

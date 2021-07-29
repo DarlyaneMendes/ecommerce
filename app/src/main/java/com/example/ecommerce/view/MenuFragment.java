@@ -10,22 +10,10 @@ import android.widget.ImageButton;
 import android.widget.TextView;
 
 import androidx.annotation.NonNull;
-import androidx.annotation.Nullable;
 import androidx.fragment.app.Fragment;
-import androidx.fragment.app.FragmentTransaction;
-import androidx.lifecycle.Observer;
 import androidx.lifecycle.ViewModelProvider;
 
-import android.content.DialogInterface;
-import android.content.Intent;
-import android.os.Bundle;
-import android.view.View;
-import android.widget.ImageButton;
-import android.widget.TextView;
 import android.widget.Toast;
-
-import androidx.appcompat.app.AppCompatActivity;
-import androidx.appcompat.app.AlertDialog;
 
 import com.example.ecommerce.R;
 import com.example.ecommerce.databinding.FragmentMenuBinding;
@@ -142,7 +130,7 @@ public class MenuFragment extends Fragment {
         imageButtonRelatorio.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
-                Intent intent = new Intent(getActivity().getApplicationContext(), ListaRelatorioActivity.class);
+                Intent intent = new Intent(getActivity().getApplicationContext(), RelatorioActivity.class);
                 startActivity(intent);
                 Toast.makeText(getActivity().getApplicationContext(),"Relatório",
                         Toast.LENGTH_LONG).show();
@@ -152,7 +140,7 @@ public class MenuFragment extends Fragment {
         textViewRelatorio.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
-                Intent intent = new Intent(getActivity().getApplicationContext(), ListaRelatorioActivity.class);
+                Intent intent = new Intent(getActivity().getApplicationContext(), RelatorioActivity.class);
                 startActivity(intent);
                 Toast.makeText(getActivity().getApplicationContext(),"Relatório",
                         Toast.LENGTH_LONG).show();

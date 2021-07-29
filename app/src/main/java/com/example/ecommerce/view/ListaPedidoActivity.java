@@ -1,28 +1,36 @@
 package com.example.ecommerce.view;
 
-import android.content.DialogInterface;
 import android.content.Intent;
 import android.os.Bundle;
-import android.view.Menu;
-import android.view.MenuInflater;
-import android.view.MenuItem;
 import android.view.View;
-import android.widget.ImageButton;
-import android.widget.TextView;
+import android.widget.Button;
+import android.widget.EditText;
+import android.widget.Toast;
 
 import androidx.appcompat.app.AppCompatActivity;
-import androidx.appcompat.app.AlertDialog;
 import androidx.annotation.NonNull;
-import androidx.recyclerview.widget.RecyclerView;
-import com.google.android.material.floatingactionbutton.FloatingActionButton;
 
-import com.example.ecommerce.R;
-import com.example.ecommerce.viewModel.ClienteViewModel;
+import com.example.ecommerce.Constant;
+import com.example.ecommerce.PedidoAPI;
+import com.example.ecommerce.viewModel.PedidoViewModel;
+
 import com.example.ecommerce.databinding.ActivityListaPedidoBinding;
+
+import java.util.List;
+
+import retrofit2.Call;
+import retrofit2.Callback;
+import retrofit2.Response;
+import retrofit2.Retrofit;
+import retrofit2.converter.gson.GsonConverterFactory;
+
+import static com.example.ecommerce.Constant.BASE_URL;
 
 public class ListaPedidoActivity extends AppCompatActivity {
 
-    private ClienteViewModel clienteViewModel;
+    EditText editTextCodigo;
+
+    private PedidoViewModel pedidoViewModel;
     private @NonNull ActivityListaPedidoBinding binding;
 
     Intent intent = getIntent();
@@ -36,39 +44,61 @@ public class ListaPedidoActivity extends AppCompatActivity {
 
         setTitle("Pedido");
 
-        final RecyclerView recyclerViewPedido = binding.recyclerViewPedido;
 
-    }
+        editTextCodigo = binding.editTextCodigoPedido;
 
-    @Override
-    public boolean onCreateOptionsMenu(Menu menu) {
+        final Button buttonNovo = binding.buttonNovoPedido;
+        final Button buttonBuscar = binding.buttonBuscarPedido;
 
-        MenuInflater inflater = getMenuInflater();
-        inflater.inflate(R.menu.menu, menu);
+        Retrofit retrofit = new Retrofit.Builder()
+                .baseUrl(BASE_URL)
+                .addConverterFactory(new Constant.NullOnEmptyConverterFactory())
+                .addConverterFactory(GsonConverterFactory.create())
+                .build();
 
-        return super.onCreateOptionsMenu(menu);
-    }
+        buttonNovo.setOnClickListener(new View.OnClickListener() {
 
-    @Override
-    public boolean onOptionsItemSelected(MenuItem item) {
-        switch (item.getItemId()) {
-            case R.id.action_novo:
-                Intent intent = new Intent(this, PedidoActivity.class);
+            @Override
+            public void onClick(View v) {
+
+                Intent intent = new Intent(ListaPedidoActivity.this, PedidoActivity.class);
                 startActivity(intent);
-                break;
+            }
+        });
 
-            case R.id.action_editar:
+        buttonBuscar.setOnClickListener(new View.OnClickListener() {
 
-                break;
+            @Override
+            public void onClick(View v) {
 
-            case R.id.action_excluir:
+                final String codPedido = editTextCodigo.getText().toString();
 
-                break;
+                PedidoAPI service = retrofit.create(PedidoAPI.class);
+                Call<List<PedidoViewModel>> call = service.getPedido(codPedido);
 
-            case R.id.action_buscar:
 
-                break;
-        }
-        return false;
+                call.enqueue(new Callback<List<PedidoViewModel>>() {
+                    @Override
+                    public void onResponse(Call<List<PedidoViewModel>> call, Response<List<PedidoViewModel>> response) {
+
+                        if (response.isSuccessful()) {
+
+                            PedidoViewModel listaPedidoResponse = (PedidoViewModel) response.body();
+
+                        }
+                    }
+
+                    @Override
+                    public void onFailure(Call<List<PedidoViewModel>> call, Throwable t) {
+
+                    }
+
+                });
+
+                Toast.makeText(ListaPedidoActivity.this, "Funcionalidade não implementada.",
+                        Toast.LENGTH_SHORT).show();
+            }
+        });
+
     }
 }

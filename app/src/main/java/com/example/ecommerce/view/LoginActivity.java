@@ -19,11 +19,9 @@ import androidx.annotation.StringRes;
 import androidx.appcompat.app.AppCompatActivity;
 import androidx.lifecycle.Observer;
 import androidx.lifecycle.ViewModelProvider;
-import androidx.viewbinding.ViewBinding;
 
 import com.example.ecommerce.R;
 import com.example.ecommerce.databinding.ActivityLoginBinding;
-import com.example.ecommerce.databinding.ActivityMenuBinding;
 import com.example.ecommerce.viewModel.LoginViewModel;
 import com.example.ecommerce.viewModel.LoginViewModelFactory;
 
@@ -79,8 +77,8 @@ public class LoginActivity extends AppCompatActivity {
                 }
                 setResult(Activity.RESULT_OK);
 
-                //Complete and destroy login activity once successful
-                finish();
+                Intent intent = new Intent(LoginActivity.this, MenuActivity.class);
+                startActivity(intent);
             }
         });
 
@@ -121,8 +119,6 @@ public class LoginActivity extends AppCompatActivity {
                 loadingProgressBar.setVisibility(View.VISIBLE);
                 loginViewModel.login(usernameEditText.getText().toString(),
                         passwordEditText.getText().toString());
-                Intent intent = new Intent(LoginActivity.this, MenuActivity.class);
-                startActivity(intent);
             }
         });
 
